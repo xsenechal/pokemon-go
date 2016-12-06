@@ -1,0 +1,12 @@
+th, td{
+  text-align: center;
+  border: 1px solid black;
+}
+th{
+  padding: 0 15px 0 15px;
+  cursor: pointer;
+}
+table{
+  border: 1px solid black;
+  margin: 20px;
+}

@@ -1,0 +1,196 @@
+<html ng-app="myApp">
+  <head>
+    <script type="text/javascript" src="https://code.angularjs.org/1.2.3/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+
+  <body>
+
+
+    <div ng-controller="MyCtrl" ng-switch on="display">
+   <div>
+     <button ng-click="display=1;versus.defensor='';computeVersus();">Pokedex</button>
+     <button ng-click="display=2;versus.defensor='';computeVersus();">Versus</button>
+   </div>
+   <table ng-switch-when=1>
+     <thead>
+       <tr>
+         <th style="cursor: auto;"></th>
+         <th ng-click="orderBy('Id')">#</th>
+         <th style="cursor: auto;"></th>
+         <th ng-click="orderBy('Name')">Name</th>
+         <th ng-click="orderBy('Type1')">Type</th>
+         <th ng-click="orderBy('BaseAttack')">Attack</th>
+         <th ng-click="orderBy('BaseDefense')">Defense</th>
+         <th ng-click="orderBy('BaseStamina')">Stamina</th>
+         <th ng-click="orderBy('sum')">Sum</th>
+         <th ng-click="orderBy('prod')">Prod</th>
+         <th>Quick moves</th>
+         <th>Special moves</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr ng-repeat="pokemon in pokemons | orderBy: filter: reverse">
+         <td>{{$index+1}}</td>
+         <td>{{pokemon.Id}}</td>
+         <td><img ng-src="img/{{pokemon.Id}}.png"></td>
+         <td>{{pokemon.Name}}</td>
+         <td><div>{{pokemon.Type1}}</div><div ng-hide="pokemon.Type2=='None'">{{pokemon.Type2}}</div></td>
+         <td>{{pokemon.BaseAttack}}</td>
+         <td>{{pokemon.BaseDefense}}</td>
+         <td>{{pokemon.BaseStamina}}</td>
+         <td>{{pokemon.sum}}</td>
+         <td>{{pokemon.prod}}</td>
+         <td>
+           <table>
+             <tr>
+               <th>Name</th>
+               <th>Type</th>
+               <th>Power</th>
+               <th>Duration</th>
+               <th>DPS</th>
+             </tr>
+             <tr ng-repeat="move in pokemon['Quick Moves']" ng-switch on="stab(pokemon, move)">
+               <td>{{move.name}}</td>
+               <td>{{move.type}}</td>
+               <td>{{move.power}}</td>
+               <td>{{move.durationMS}}</td>
+               <td ng-switch-when="true"><b>{{move.dps*1.25 | number:2}}</b></td>
+               <td ng-switch-when="false">{{move.dps}}</td>
+             </tr>
+           </table>
+         </td>
+         <td>
+           <table>
+             <tr>
+               <th>Name</th>
+               <th>Type</th>
+               <th>Power</th>
+               <th>Duration</th>
+               <th>DPS</th>
+             </tr>
+             <tr ng-repeat="move in pokemon['Charge/Special Moves']" ng-switch on="stab(pokemon, move)">
+               <td>{{move.name}}</td>
+               <td>{{move.type}}</td>
+               <td>{{move.power}}</td>
+               <td>{{move.durationMS}}</td>
+               <td ng-switch-when="true"><b>{{move.dps*1.25 | number:2}}</b></td>
+               <td ng-switch-when="false">{{move.dps}}</td>
+             </tr>
+           </table>
+           </td>
+       </tr>
+     </tbody>
+   </table>
+
+   <div ng-switch-when=2>
+   Pokemon to fight:<input type="text" ng-model="versus.defensor"><button ng-click="computeVersus()">GO!</button>
+   <div ng-if="versus.pokeDefensor!=null">
+   <div>
+     <table>
+     <tr>
+         <th>#</th>
+         <th></th>
+         <th>Name</th>
+         <th>Type</th>
+         <th>Attack</th>
+         <th>Defense</th>
+         <th>Stamina</th>
+         <th>Sum</th>
+         <th>Prod</th>
+         <th>Quick moves</th>
+         <th>Special moves</th>
+       </tr>
+       <tr>
+         <td>{{versus.pokeDefensor.Id}}</td>
+         <td><img ng-src="img/{{versus.pokeDefensor.Id}}.png"></td>
+         <td>{{versus.pokeDefensor.Name}}</td>
+         <td><div>{{versus.pokeDefensor.Type1}}</div><div ng-hide="versus.pokeDefensor.Type2=='None'">{{versus.pokeDefensor.Type2}}</div></td>
+         <td>{{versus.pokeDefensor.BaseAttack}}</td>
+         <td>{{versus.pokeDefensor.BaseDefense}}</td>
+         <td>{{versus.pokeDefensor.BaseStamina}}</td>
+         <td>{{versus.pokeDefensor.sum}}</td>
+         <td>{{versus.pokeDefensor.prod}}</td>
+         <td>
+           <table>
+             <tr>
+               <th>Name</th>
+               <th>Type</th>
+               <th>Power</th>
+               <th>Duration</th>
+               <th>DPS</th>
+             </tr>
+             <tr ng-repeat="move in versus.pokeDefensor['Quick Moves']" ng-switch on="stab(versus.pokeDefensor, move)">
+               <td>{{move.name}}</td>
+               <td>{{move.type}}</td>
+               <td>{{move.power}}</td>
+               <td>{{move.durationMS}}</td>
+               <td ng-switch-when="true"><b>{{move.dps*1.25 | number:2}}</b></td>
+               <td ng-switch-when="false">{{move.dps}}</td>
+             </tr>
+           </table>
+         </td>
+         <td>
+           <table>
+             <tr>
+               <th>Name</th>
+               <th>Type</th>
+               <th>Power</th>
+               <th>Duration</th>
+               <th>DPS</th>
+             </tr>
+             <tr ng-repeat="move in versus.pokeDefensor['Charge/Special Moves']" ng-switch on="stab(versus.pokeDefensor, move)">
+               <td>{{move.name}}</td>
+               <td>{{move.type}}</td>
+               <td>{{move.power}}</td>
+               <td>{{move.durationMS}}</td>
+               <td ng-switch-when="true"><b>{{move.dps*1.25 | number:2}}</b></td>
+               <td ng-switch-when="false">{{move.dps}}</td>
+             </tr>
+           </table>
+           </td>
+       </tr>
+     </table>
+     </div>
+     <div>
+     <table>
+       <thead>
+         <tr>
+           <th></th>
+           <th>#</th>
+           <th></th>
+           <th>Name</th>
+           <th>Type</th>
+           <th>Attack</th>
+           <th>Defense</th>
+           <th>Stamina</th>
+           <th>Move</th>
+           <th>Damage</th>
+           <th>DPS</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr ng-repeat="pokemon in versus.pokemons | orderBy: 'dps': true">
+           <td>{{$index+1}}</td>
+           <td>{{pokemon.Id}}</td>
+           <td><img ng-src="img/{{pokemon.Id}}.png"></td>
+           <td>{{pokemon.Name}}</td>
+           <td><div>{{pokemon.Type1}}</div><div ng-hide="pokemon.Type2=='None'">{{pokemon.Type2}}</div></td>
+           <td>{{pokemon.BaseAttack}}</td>
+           <td>{{pokemon.BaseDefense}}</td>
+           <td>{{pokemon.BaseStamina}}</td>
+           <td>{{pokemon.moveName}}</td>
+           <td>{{pokemon.damage}}</td>
+           <td>{{pokemon.dps | number:2}}</td>
+         </tr>
+        </tbody>
+     </table>
+     </div>
+   </div>
+   </div>
+  </div>
+
+
+  </body>
+</html>
