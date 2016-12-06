@@ -31,9 +31,13 @@ function MyCtrl($scope, $filter,$http) {
       }else{
       	$scope.versus.pokeDefensor = $filter('filter')($scope.pokemons, {"Name":$scope.versus.defensor})[0];
         angular.forEach($scope.pokemons, function(pokemon){
+		var defensorDmg = [];
+        	angular.forEach($scope.versus.pokeDefensor['Quick Moves'], function(move){
+          		defensorDmg.puch( Math.floor((((($scope.versus.pokeDefensor.BaseAttack+15)*move.power)/(pokemon.BaseDefense+15))/2)*($scope.stab($scope.versus.pokeDefensor, move)?1.25:1)*$scope.efficiency(move, pokemon))+1);
+          	});
         	angular.forEach(pokemon['Quick Moves'], function(move){
           	var dmg = Math.floor(((((pokemon.BaseAttack+15)*move.power)/($scope.versus.pokeDefensor.BaseDefense+15))/2)*($scope.stab(pokemon, move)?1.25:1)*$scope.efficiency(move, $scope.versus.pokeDefensor))+1;
-            $scope.versus.pokemons.push({Id: pokemon.Id, Name: pokemon.Name, Type1: pokemon.Type1, Type2: pokemon.Type2, BaseAttack: pokemon.BaseAttack, BaseDefense: pokemon.BaseDefense, BaseStamina: pokemon.BaseStamina, moveName: move.name, damage: dmg, dps: dmg/+(move.durationMS.replace(',', ''))*1000});
+            $scope.versus.pokemons.push({Id: pokemon.Id, Name: pokemon.Name, Type1: pokemon.Type1, Type2: pokemon.Type2, BaseAttack: pokemon.BaseAttack, BaseDefense: pokemon.BaseDefense, BaseStamina: pokemon.BaseStamina, moveName: move.name, damage: dmg, dps: dmg/+(move.durationMS.replace(',', ''))*1000, income: defensorDmg});
           });
         });
       }
