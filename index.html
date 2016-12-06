@@ -184,7 +184,7 @@
            <td>{{pokemon.moveName}}</td>
            <td>{{pokemon.damage}}</td>
            <td>{{pokemon.dps | number:2}}</td>
-           <td>{{pokemon.income | number:2}}</td>
+           <td><div ng-repeat="income in pokemon.income">{{income | number:2}}</div></td>
          </tr>
         </tbody>
      </table>
