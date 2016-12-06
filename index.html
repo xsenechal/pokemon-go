@@ -52,7 +52,7 @@
                <th>DPS</th>
              </tr>
              <tr ng-repeat="move in pokemon['Quick Moves']" ng-switch on="stab(pokemon, move)">
-               <td>{{move.name}}</td>
+               <td>{{move.displayName}}<small>({{move.localName}})</small></td>
                <td>{{move.type}}</td>
                <td>{{move.power}}</td>
                <td>{{move.durationMS}}</td>
@@ -71,7 +71,7 @@
                <th>DPS</th>
              </tr>
              <tr ng-repeat="move in pokemon['Charge/Special Moves']" ng-switch on="stab(pokemon, move)">
-               <td>{{move.name}}</td>
+               <td>{{move.displayName}}<small>({{move.localName}})</small></td>
                <td>{{move.type}}</td>
                <td>{{move.power}}</td>
                <td>{{move.durationMS}}</td>

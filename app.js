@@ -64,6 +64,8 @@ function MyCtrl($scope, $filter,$http) {
        });
 
        angular.forEach($scope.moves, function(move){
+        move['displayName'] = move.name.toLowerCase().replace(/\b\w/g, function(l){ return l.toUpperCase() });
+        move['localName'] = $scope.movesTranslation[move['displayName']];
         angular.forEach(move.pokemons, function(id){
           var tmp = $filter('filter')($scope.pokemons, {Id: +id}, true);
           angular.forEach(tmp, function(pokemon){
@@ -81,7 +83,10 @@ function MyCtrl($scope, $filter,$http) {
       	$scope.moves = moves;
         $http.get('data/efficiency.json').success(function(data){
           efficiency = data;
-          $scope.runTime();
+          $http.get('data/moves-translation-en-fr.json').success(function(data){
+            $scope.movesTranslation = data;
+            $scope.runTime();
+          })
         });
       });
     });
