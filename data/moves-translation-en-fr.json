@@ -1,265 +1,134 @@
-[{
-    "Acid": "Acide"
-}, {
-    "Steel Wing": "Aile d'Acier"
-}, {
-    "Low Kick": "Balayage"
-}, {
-    "Tackle": "Charge"
-}, {
-    "Confusion": "Choc Mental"
-}, {
-    "Mud Slap": "Coud'Boue"
-}, {
-    "Sucker Punch": "Coup Bas"
-}, {
-    "Cut": "Coupe"
-}, {
-    "Psycho Cut": "Coupe Psycho"
-}, {
-    "Fire Fang": "Crocs Feu"
-}, {
-    "Wing Attack": "Cru-Aile"
-}, {
-    "Poison Sting": "Dard-Venin"
-}, {
-    "Poison Jab": "Direct Toxik"
-}, {
-    "Dragon Breath": "Dracosouffle"
-}, {
-    "Feint Attack": "Feinte"
-}, {
-    "Ember": "Flammèche"
-}, {
-    "Vine Whip": "Fouet Lianes"
-}, {
-    "Scratch": "Griffe"
-}, {
-    "Metal Claw": "Griffe Acier"
-}, {
-    "Shadow Claw": "Griffe Ombre"
-}, {
-    "Rock Throw": "Jet-Pierres"
-}, {
-    "Lick": "Léchouille"
-}, {
-    "Bite": "Morsure"
-}, {
-    "Peck": "Picpic"
-}, {
-    "Bug Bite": "Piqûre"
-}, {
-    "Bullet Punch": "Pisto-Poing"
-}, {
-    "Water Gun": "Pistolet à O"
-}, {
-    "Karate Chop": "Poing-Karaté"
-}, {
-    "Zen Headbutt": "Psykoud'Boul"
-}, {
-    "Frost Breath": "Souffle Glacé"
-}, {
-    "Fury Cutter": "Taillade"
-}, {
-    "Mud Shot": "Tir de Boue"
-}, {
-    "Razor Leaf": "Tranch'herbe"
-}, {
-    "Splash": "Trempette"
-}, {
-    "Quick Attack": "Vive-attaque"
-}, {
-    "Thunder Shock": "Éclair"
-}, {
-    "Rock Smash": "Éclate-Roc"
-}, {
-    "Ice Shard": "Éclats Glace"
-}, {
-    "Pound": "Écras'Face"
-}, {
-    "Bubble": "Écume"
-}, {
-    "Spark": "Étincelle"
-}, {
-    "Aqua Jet": "Aqua-Jet"
-}, {
-    "Aerial Ace": "Aéropique"
-}, {
-    "Low Sweep": "Balayette"
-}, {
-    "Shadow Ball": "Ball'Ombre"
-}, {
-    "Drill Peck": "Bec Vrille"
-}, {
-    "Blizzard": "Blizzard"
-}, {
-    "Sludge Bomb": "Bomb-Beurk"
-}, {
-    "Magnet Bomb": "Bombaimant"
-}, {
-    "Mud Bomb": "Boue-Bombe"
-}, {
-    "Bug Buzz": "Bourdon"
-}, {
-    "Bubble Beam": "Bulles d'O"
-}, {
-    "Heat Wave": "Canicule"
-}, {
-    "Seed Bomb": "Canon Graine"
-}, {
-    "Brick Break": "Casse-Brique"
-}, {
-    "Psyshock": "Choc Psy"
-}, {
-    "Discharge": "Coup d'Jus"
-}, {
-    "Cross Chop": "Coup-Croix"
-}, {
-    "Sludge Wave": "Cradovague"
-}, {
-    "Hyper Fang": "Croc de mort"
-}, {
-    "Poison Fang": "Crochet Venin"
-}, {
-    "Heart Stamp": "Crèvecœur"
-}, {
-    "Play Rough": "Câlinerie"
-}, {
-    "Dragon Pulse": "Dracochoc"
-}, {
-    "Dragon Claw": "Dracogriffe"
-}, {
-    "Fire Blast": "Déflagration"
-}, {
-    "Gunk Shot": "Détricanon"
-}, {
-    "Sludge": "Détritus"
-}, {
-    "Thunder": "Fatal-Foudre"
-}, {
-    "Vice Grip": "Force Poigne"
-}, {
-    "Psystrike": "Frappe Psy"
-}, {
-    "Giga Drain": "Giga-Sangsue"
-}, {
-    "Hydro Pump": "Hydrocanon"
-}, {
-    "Aqua Tail": "Hydroqueue"
-}, {
-    "Horn Attack": "Koud'Korne"
-}, {
-    "Stone Edge": "Lame de Roc"
-}, {
-    "Leaf Blade": "Lame-Feuille"
-}, {
-    "Flamethrower": "Lance-Flammes"
-}, {
-    "Solar Beam": "Lance-Soleil"
-}, {
-    "Ice Beam": "Laser Glace"
-}, {
-    "Wrap": "Ligotage"
-}, {
-    "Flash Cannon": "Luminocanon"
-}, {
-    "Struggle": "Lutte"
-}, {
-    "Bone Club": "Massd'os"
-}, {
-    "Mega Drain": "Mega-Sangsue"
-}, {
-    "Megahorn": "Mégacorne"
-}, {
-    "Power Whip": "Mégafouet"
-}, {
-    "Swift": "Météores"
-}, {
-    "Flame Charge": "Nitrocharge"
-}, {
-    "Shadow Sneak": "Ombre Portée"
-}, {
-    "Twister": "Ouragan"
-}, {
-    "Parabolic Charge": "Parabocharge"
-}, {
-    "Bulldoze": "Piétisol"
-}, {
-    "X-Scissor": "Plaie-Croix"
-}, {
-    "Body Slam": "Plaquage"
-}, {
-    "Fire Punch": "Poing de Feu"
-}, {
-    "Shadow Punch": "Poing Ombre"
-}, {
-    "Ice Punch": "Poing-Glace"
-}, {
-    "Thunder Punch": "Poing-Éclair"
-}, {
-    "Cross Poison": "Poison-Croix"
-}, {
-    "Ancient Power": "Pouvoir Antique"
-}, {
-    "Moonblast": "Pouvoir Lunaire"
-}, {
-    "Psychic": "Psyko"
-}, {
-    "Psybeam": "Rafale Psy"
-}, {
-    "Power Gem": "Rayon Gemme"
-}, {
-    "Signal Beam": "Rayon Signal"
-}, {
-    "Flame Burst": "Rebondifeu"
-}, {
-    "Rest": "Repos"
-}, {
-    "Flame Wheel": "Roue de Feu"
-}, {
-    "Submission": "Sacrifice"
-}, {
-    "Brine": "Saumure"
-}, {
-    "Earthquake": "Séisme"
-}, {
-    "Petal Blizzard": "Tempête Florale"
-}, {
-    "Rock Tomb": "Tomberoche"
-}, {
-    "Thunderbolt": "Tonnerre"
-}, {
-    "Air Cutter": "Tranch'Air"
-}, {
-    "Night Slash": "Tranche-Nuit"
-}, {
-    "Dig": "Tunnel"
-}, {
-    "Drill Run": "Tunnelier"
-}, {
-    "Iron Head": "Tête de Fer"
-}, {
-    "Hyper Beam": "Ultralaser"
-}, {
-    "Draining Kiss": "Vampibaiser"
-}, {
-    "Icy Wind": "Vent Glace"
-}, {
-    "Ominous Wind": "Vent Mauvais"
-}, {
-    "Hurricane": "Vent Violent"
-}, {
-    "Water Pulse": "Vibraqua"
-}, {
-    "Dark Pulse": "Vibrobscur"
-}, {
-    "Disarming Voice": "Voix Enjôleuse"
-}, {
-    "Rock Slide": "Éboulement"
-}, {
-    "Scald": "Ébullition"
-}, {
-    "Dazzling Gleam": "Éclat Magique"
-}, {
+{
+    "Acid": "Acide",
+    "Steel Wing": "Aile d'Acier",
+    "Low Kick": "Balayage",
+    "Tackle": "Charge",
+    "Confusion": "Choc Mental",
+    "Mud Slap": "Coud'Boue",
+    "Sucker Punch": "Coup Bas",
+    "Cut": "Coupe",
+    "Psycho Cut": "Coupe Psycho",
+    "Fire Fang": "Crocs Feu",
+    "Wing Attack": "Cru-Aile",
+    "Poison Sting": "Dard-Venin",
+    "Poison Jab": "Direct Toxik",
+    "Dragon Breath": "Dracosouffle",
+    "Feint Attack": "Feinte",
+    "Ember": "Flammèche",
+    "Vine Whip": "Fouet Lianes",
+    "Scratch": "Griffe",
+    "Metal Claw": "Griffe Acier",
+    "Shadow Claw": "Griffe Ombre",
+    "Rock Throw": "Jet-Pierres",
+    "Lick": "Léchouille",
+    "Bite": "Morsure",
+    "Peck": "Picpic",
+    "Bug Bite": "Piqûre",
+    "Bullet Punch": "Pisto-Poing",
+    "Water Gun": "Pistolet à O",
+    "Karate Chop": "Poing-Karaté",
+    "Zen Headbutt": "Psykoud'Boul",
+    "Frost Breath": "Souffle Glacé",
+    "Fury Cutter": "Taillade",
+    "Mud Shot": "Tir de Boue",
+    "Razor Leaf": "Tranch'herbe",
+    "Splash": "Trempette",
+    "Quick Attack": "Vive-attaque",
+    "Thunder Shock": "Éclair",
+    "Rock Smash": "Éclate-Roc",
+    "Ice Shard": "Éclats Glace",
+    "Pound": "Écras'Face",
+    "Bubble": "Écume",
+    "Spark": "Étincelle",
+    "Aqua Jet": "Aqua-Jet",
+    "Aerial Ace": "Aéropique",
+    "Low Sweep": "Balayette",
+    "Shadow Ball": "Ball'Ombre",
+    "Drill Peck": "Bec Vrille",
+    "Blizzard": "Blizzard",
+    "Sludge Bomb": "Bomb-Beurk",
+    "Magnet Bomb": "Bombaimant",
+    "Mud Bomb": "Boue-Bombe",
+    "Bug Buzz": "Bourdon",
+    "Bubble Beam": "Bulles d'O",
+    "Heat Wave": "Canicule",
+    "Seed Bomb": "Canon Graine",
+    "Brick Break": "Casse-Brique",
+    "Psyshock": "Choc Psy",
+    "Discharge": "Coup d'Jus",
+    "Cross Chop": "Coup-Croix",
+    "Sludge Wave": "Cradovague",
+    "Hyper Fang": "Croc de mort",
+    "Poison Fang": "Crochet Venin",
+    "Heart Stamp": "Crèvecœur",
+    "Play Rough": "Câlinerie",
+    "Dragon Pulse": "Dracochoc",
+    "Dragon Claw": "Dracogriffe",
+    "Fire Blast": "Déflagration",
+    "Gunk Shot": "Détricanon",
+    "Sludge": "Détritus",
+    "Thunder": "Fatal-Foudre",
+    "Vice Grip": "Force Poigne",
+    "Psystrike": "Frappe Psy",
+    "Giga Drain": "Giga-Sangsue",
+    "Hydro Pump": "Hydrocanon",
+    "Aqua Tail": "Hydroqueue",
+    "Horn Attack": "Koud'Korne",
+    "Stone Edge": "Lame de Roc",
+    "Leaf Blade": "Lame-Feuille",
+    "Flamethrower": "Lance-Flammes",
+    "Solar Beam": "Lance-Soleil",
+    "Ice Beam": "Laser Glace",
+    "Wrap": "Ligotage",
+    "Flash Cannon": "Luminocanon",
+    "Struggle": "Lutte",
+    "Bone Club": "Massd'os",
+    "Mega Drain": "Mega-Sangsue",
+    "Megahorn": "Mégacorne",
+    "Power Whip": "Mégafouet",
+    "Swift": "Météores",
+    "Flame Charge": "Nitrocharge",
+    "Shadow Sneak": "Ombre Portée",
+    "Twister": "Ouragan",
+    "Parabolic Charge": "Parabocharge",
+    "Bulldoze": "Piétisol",
+    "X-Scissor": "Plaie-Croix",
+    "Body Slam": "Plaquage",
+    "Fire Punch": "Poing de Feu",
+    "Shadow Punch": "Poing Ombre",
+    "Ice Punch": "Poing-Glace",
+    "Thunder Punch": "Poing-Éclair",
+    "Cross Poison": "Poison-Croix",
+    "Ancient Power": "Pouvoir Antique",
+    "Moonblast": "Pouvoir Lunaire",
+    "Psychic": "Psyko",
+    "Psybeam": "Rafale Psy",
+    "Power Gem": "Rayon Gemme",
+    "Signal Beam": "Rayon Signal",
+    "Flame Burst": "Rebondifeu",
+    "Rest": "Repos",
+    "Flame Wheel": "Roue de Feu",
+    "Submission": "Sacrifice",
+    "Brine": "Saumure",
+    "Earthquake": "Séisme",
+    "Petal Blizzard": "Tempête Florale",
+    "Rock Tomb": "Tomberoche",
+    "Thunderbolt": "Tonnerre",
+    "Air Cutter": "Tranch'Air",
+    "Night Slash": "Tranche-Nuit",
+    "Dig": "Tunnel",
+    "Drill Run": "Tunnelier",
+    "Iron Head": "Tête de Fer",
+    "Hyper Beam": "Ultralaser",
+    "Draining Kiss": "Vampibaiser",
+    "Icy Wind": "Vent Glace",
+    "Ominous Wind": "Vent Mauvais",
+    "Hurricane": "Vent Violent",
+    "Water Pulse": "Vibraqua",
+    "Dark Pulse": "Vibrobscur",
+    "Disarming Voice": "Voix Enjôleuse",
+    "Rock Slide": "Éboulement",
+    "Scald": "Ébullition",
+    "Dazzling Gleam": "Éclat Magique",
     "Stomp": "Écrasement"
-}]
+}
