@@ -33,7 +33,7 @@ function MyCtrl($scope, $filter,$http) {
         angular.forEach($scope.pokemons, function(pokemon){
 		var defensorDmg = [];
         	angular.forEach($scope.versus.pokeDefensor['Quick Moves'], function(move){
-          		defensorDmg.puch( (Math.floor((((($scope.versus.pokeDefensor.BaseAttack+15)*move.power)/(pokemon.BaseDefense+15))/2)*($scope.stab($scope.versus.pokeDefensor, move)?1.25:1)*$scope.efficiency(move, pokemon))+1)/+(move.durationMS.replace(',', ''))*1000);
+          		defensorDmg.push( (Math.floor((((($scope.versus.pokeDefensor.BaseAttack+15)*move.power)/(pokemon.BaseDefense+15))/2)*($scope.stab($scope.versus.pokeDefensor, move)?1.25:1)*$scope.efficiency(move, pokemon))+1)/+(move.durationMS.replace(',', ''))*1000);
           	});
         	angular.forEach(pokemon['Quick Moves'], function(move){
           	var dmg = Math.floor(((((pokemon.BaseAttack+15)*move.power)/($scope.versus.pokeDefensor.BaseDefense+15))/2)*($scope.stab(pokemon, move)?1.25:1)*$scope.efficiency(move, $scope.versus.pokeDefensor))+1;
