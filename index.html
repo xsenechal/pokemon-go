@@ -184,7 +184,7 @@
            <td>{{pokemon.moveName}}</td>
            <td>{{pokemon.damage}}</td>
            <td>{{pokemon.dps | number:2}}</td>
-           <td><div ng-repeat="income in pokemon.income"><span>{{income}}</span><span>({{income/((pokemon.BaseStamina+15)*0,79030001)*100 | number: 2}}%)</span></div></td>
+           <td><div ng-repeat="income in pokemon.income"><span>{{income}}</span><span>({{income/((pokemon.BaseStamina+15)*0.79030001)*100 | number: 2}}%)</span></div></td>
          </tr>
         </tbody>
      </table>
