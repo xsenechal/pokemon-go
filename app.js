@@ -5,12 +5,10 @@ var myApp = angular.module('myApp',[]);
 
 function MyCtrl($scope, $filter,$http) {
 
-		var efficiency;
+	var efficiency;
 
-		$scope.display=1;
-    $scope.versus = {defensor: "",
-    									pokeDefensor: null,
-                      pokemons: []};
+	$scope.display=1;
+    $scope.versus = {defensor: "", pokeDefensor: null, pokemons: []};
     //$scope.defensor = "Bulbasaur";
     //$scope.pokeDefensor = null;
 
@@ -20,7 +18,7 @@ function MyCtrl($scope, $filter,$http) {
 
     $scope.efficiency = function(move, pokemon){
     	var e1 = efficiency[move.type.toUpperCase()]?efficiency[move.type.toUpperCase()][pokemon.Type1.toUpperCase()] || 1:1;
-      var e2 = efficiency[move.type.toUpperCase()]?efficiency[move.type.toUpperCase()][pokemon.Type2.toUpperCase()] || 1:1;
+      	var e2 = efficiency[move.type.toUpperCase()]?efficiency[move.type.toUpperCase()][pokemon.Type2.toUpperCase()] || 1:1;
     	return e1*e2;
     };
 
@@ -33,7 +31,7 @@ function MyCtrl($scope, $filter,$http) {
         angular.forEach($scope.pokemons, function(pokemon){
 		var defensorDmg = [];
         	angular.forEach($scope.versus.pokeDefensor['Quick Moves'], function(move){
-          		defensorDmg.push(Math.floor((((($scope.versus.pokeDefensor.BaseAttack+15)*move.power)/(pokemon.BaseDefense+15))/2)*($scope.stab($scope.versus.pokeDefensor, move)?1.25:1)*$scope.efficiency(move, pokemon))+1);
+          		defensorDmg.push({name: move.name, dps: (Math.floor((((($scope.versus.pokeDefensor.BaseAttack+15)*move.power)/(pokemon.BaseDefense+15))/2)*($scope.stab($scope.versus.pokeDefensor, move)?1.25:1)*$scope.efficiency(move, pokemon))+1)/+(move.durationMS.replace(',', ''))*1000});
           	});
         	angular.forEach(pokemon['Quick Moves'], function(move){
           	var dmg = Math.floor(((((pokemon.BaseAttack+15)*move.power)/($scope.versus.pokeDefensor.BaseDefense+15))/2)*($scope.stab(pokemon, move)?1.25:1)*$scope.efficiency(move, $scope.versus.pokeDefensor))+1;
