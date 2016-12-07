@@ -12,6 +12,7 @@
    <div>
      <button ng-click="display=1;versus.defensor='';computeVersus();">Pokedex</button>
      <button ng-click="display=2;versus.defensor='';computeVersus();">Versus</button>
+     <input type="checkbox" ng-model="showLegendary">Afficher les légendaires</input>
    </div>
    <table ng-switch-when=1>
      <thead>
@@ -19,7 +20,7 @@
          <th style="cursor: auto;"></th>
          <th ng-click="orderBy('Id')">#</th>
          <th style="cursor: auto;"></th>
-         <th ng-click="orderBy('Name')">Name</th>
+         <th ng-click="orderBy('localName')">Name</th>
          <th ng-click="orderBy('Type1')">Type</th>
          <th ng-click="orderBy('BaseAttack')">Attack</th>
          <th ng-click="orderBy('BaseDefense')">Defense</th>
@@ -31,11 +32,11 @@
        </tr>
      </thead>
      <tbody>
-       <tr ng-repeat="pokemon in pokemons | orderBy: filter: reverse">
+       <tr ng-repeat="pokemon in pokemons | orderBy: filter: reverse" ng-if="showLegendary || !pokemon.Legendary">
          <td>{{$index+1}}</td>
          <td>{{pokemon.Id}}</td>
          <td><img ng-src="img/{{pokemon.Id}}.png"></td>
-         <td>{{pokemon.Name}}</td>
+         <td><div>{{pokemon.localName}}</div><div><small>{{pokemon.Name}}</small></div></td>
          <td><div>{{pokemon.Type1}}</div><div ng-hide="pokemon.Type2=='None'">{{pokemon.Type2}}</div></td>
          <td>{{pokemon.BaseAttack}}</td>
          <td>{{pokemon.BaseDefense}}</td>
@@ -172,7 +173,7 @@
          </tr>
        </thead>
        <tbody>
-         <tr ng-repeat="pokemon in versus.pokemons | orderBy: 'dps': true">
+         <tr ng-repeat="pokemon in versus.pokemons | orderBy: 'dps': true" ng-if="showLegendary || !pokemon.Legendary">
            <td>{{$index+1}}</td>
            <td>{{pokemon.Id}}</td>
            <td><img ng-src="img/{{pokemon.Id}}.png"></td>

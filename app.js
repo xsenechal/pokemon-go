@@ -37,7 +37,7 @@ function MyCtrl($scope, $filter,$http) {
           	});
         	angular.forEach(pokemon['Quick Moves'], function(move){
           	var dmg = Math.floor(((((pokemon.BaseAttack+15)*move.power)/($scope.versus.pokeDefensor.BaseDefense+15))/2)*($scope.stab(pokemon, move)?1.25:1)*$scope.efficiency(move, $scope.versus.pokeDefensor))+1;
-            $scope.versus.pokemons.push({Id: pokemon.Id, Name: pokemon.Name, Type1: pokemon.Type1, Type2: pokemon.Type2, BaseAttack: pokemon.BaseAttack, BaseDefense: pokemon.BaseDefense, BaseStamina: pokemon.BaseStamina, moveName: move.name, damage: dmg, dps: dmg/+(move.durationMS.replace(',', ''))*1000, income: defensorDmg});
+            $scope.versus.pokemons.push({Id: pokemon.Id, Name: pokemon.Name, Type1: pokemon.Type1, Type2: pokemon.Type2, BaseAttack: pokemon.BaseAttack, BaseDefense: pokemon.BaseDefense, BaseStamina: pokemon.BaseStamina, moveName: move.name, damage: dmg, dps: dmg/+(move.durationMS.replace(',', ''))*1000, income: defensorDmg, Legendary:pokemon.Legendary});
           });
         });
       }
@@ -61,6 +61,7 @@ function MyCtrl($scope, $filter,$http) {
           pokemon.prod = pokemon.BaseAttack * pokemon.BaseDefense * pokemon.BaseStamina;
           pokemon["Quick Moves"] = [];
           pokemon["Charge/Special Moves"] = [];
+					pokemon["localName"] = $scope.pokemonsTranslation[pokemon.Name];;
        });
 
        angular.forEach($scope.moves, function(move){
@@ -85,8 +86,12 @@ function MyCtrl($scope, $filter,$http) {
           efficiency = data;
           $http.get('data/moves-translation-en-fr.json').success(function(data){
             $scope.movesTranslation = data;
-            $scope.runTime();
-          })
+						$http.get('data/pokemons-translation-fr.json').success(function(data){
+							$scope.pokemonsTranslation = data;
+
+							$scope.runTime();
+						});
+          });
         });
       });
     });

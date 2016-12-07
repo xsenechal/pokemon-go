@@ -4461,7 +4461,8 @@
 		"CP Normalised": 0.7186293436,
 		"CP Rank": 9,
 		"HP Normalised": 0.3783783784,
-		"HP Rank": 20
+		"HP Rank": 20,
+		"Legendary": true
 	}, {
 		"Id": 145,
 		"Name": "Zapdos",
@@ -4492,7 +4493,8 @@
 		"CP Normalised": 0.7514478764,
 		"CP Rank": 5,
 		"HP Normalised": 0.3783783784,
-		"HP Rank": 18
+		"HP Rank": 18,
+		"Legendary": true
 	}, {
 		"Id": 146,
 		"Name": "Moltres",
@@ -4523,7 +4525,8 @@
 		"CP Normalised": 0.7818532819,
 		"CP Rank": 4,
 		"HP Normalised": 0.3783783784,
-		"HP Rank": 17
+		"HP Rank": 17,
+		"Legendary": true
 	}, {
 		"Id": 147,
 		"Name": "Dratini",
@@ -4647,7 +4650,8 @@
 		"CP Normalised": 1,
 		"CP Rank": 1,
 		"HP Normalised": 0.4398034398,
-		"HP Rank": 7
+		"HP Rank": 7,
+		"Legendary": true
 	}, {
 		"Id": 151,
 		"Name": "Mew",
@@ -4678,6 +4682,7 @@
 		"CP Normalised": 0.7960907336,
 		"CP Rank": 3,
 		"HP Normalised": 0.4152334152,
-		"HP Rank": 11
+		"HP Rank": 11,
+		"Legendary": true
 	}
 ]
