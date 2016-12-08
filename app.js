@@ -46,7 +46,7 @@ function MyCtrl($scope, $filter,$http) {
 				angular.forEach($scope.versus.pokeDefensor['Quick Moves'], function(move){
 					var defensorDps = (Math.floor((((($scope.versus.pokeDefensor.BaseAttack+15)*move.power)/(pokemon.BaseDefense+15))/2)*($scope.stab($scope.versus.pokeDefensor, move)?1.25:1)*$scope.efficiency(move, pokemon))+1)/2;
 					fromDefensor.push({
-						name: move.name,
+						localName: move.localName,
 						dps: defensorDps,
 						healthLost: defensorDps / health * 100}
 					);
@@ -70,7 +70,7 @@ function MyCtrl($scope, $filter,$http) {
 						dps: dps,
 						healthLost: dps / defensorHealth * 100,
 						income: fromDefensor,
-						averageHealthLost: averageHealthLost,
+						rated: (dps / defensorHealth * 100) / averageHealthLost,
 						Legendary:pokemon.Legendary}
 					);
           			});
