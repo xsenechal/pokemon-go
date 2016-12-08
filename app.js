@@ -59,7 +59,7 @@ function MyCtrl($scope, $filter,$http) {
           pokemon.prod = pokemon.BaseAttack * pokemon.BaseDefense * pokemon.BaseStamina;
           pokemon["Quick Moves"] = [];
           pokemon["Charge/Special Moves"] = [];
-					pokemon["localName"] = $scope.pokemonsTranslation[pokemon.Name];;
+					pokemon["localName"] = $scope.pokemonsTranslation[pokemon.Id];
        });
 
        angular.forEach($scope.moves, function(move){
