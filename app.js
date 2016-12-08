@@ -91,11 +91,15 @@ function MyCtrl($scope, $filter,$http) {
 			pokemon["Quick Moves"] = [];
 			pokemon["Charge/Special Moves"] = [];
 			pokemon["localName"] = $scope.pokemonsTranslation[pokemon.Id];
+      pokemon["localType1"] = $scope.typesTranslation[pokemon.Type1];
+      pokemon["localType2"] = $scope.typesTranslation[pokemon.Type2];      
 		});
 
 		angular.forEach($scope.moves, function(move){
 			move['displayName'] = move.name.toLowerCase().replace(/\b\w/g, function(l){ return l.toUpperCase() });
 			move['localName'] = $scope.movesTranslation[move['displayName']];
+      move['displayType'] = move.type.toLowerCase().replace(/\b\w/g, function(l){ return l.toUpperCase() });
+      move['localType'] = $scope.typesTranslation[move['displayType']];
 			angular.forEach(move.pokemons, function(id){
 				var tmp = $filter('filter')($scope.pokemons, {Id: +id}, true);
 				angular.forEach(tmp, function(pokemon){
@@ -118,7 +122,10 @@ function MyCtrl($scope, $filter,$http) {
 					$scope.movesTranslation = data;
 					$http.get('data/pokemons-translation-fr.json').success(function(data){
 						$scope.pokemonsTranslation = data;
-						$scope.runTime();
+            $http.get('data/types-translation-en-fr.json').success(function(data){
+            $scope.typesTranslation = data;
+            $scope.runTime();
+          });
 					});
 				});
 			});

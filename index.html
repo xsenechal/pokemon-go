@@ -21,7 +21,7 @@
          <th ng-click="orderBy('Id')">#</th>
          <th style="cursor: auto;"></th>
          <th ng-click="orderBy('localName')">Name</th>
-         <th ng-click="orderBy('Type1')">Type</th>
+         <th ng-click="orderBy('localType1')">Type</th>
          <th ng-click="orderBy('BaseAttack')">Attack</th>
          <th ng-click="orderBy('BaseDefense')">Defense</th>
          <th ng-click="orderBy('BaseStamina')">Stamina</th>
@@ -37,7 +37,7 @@
          <td>{{pokemon.Id}}</td>
          <td><img ng-src="img/{{pokemon.Id}}.png"></td>
          <td><div>{{pokemon.localName}}</div><div><small>({{pokemon.Name}})</small></div></td>
-         <td><div>{{pokemon.Type1}}</div><div ng-hide="pokemon.Type2=='None'">{{pokemon.Type2}}</div></td>
+         <td><div>{{pokemon.localType1}}</div><div ng-hide="pokemon.Type2=='None'">{{pokemon.localType2}}</div></td>
          <td>{{pokemon.BaseAttack}}</td>
          <td>{{pokemon.BaseDefense}}</td>
          <td>{{pokemon.BaseStamina}}</td>
@@ -54,7 +54,7 @@
              </tr>
              <tr ng-repeat="move in pokemon['Quick Moves']" ng-switch on="stab(pokemon, move)">
                <td>{{move.localName}}<small>({{move.displayName}})</small></td>
-               <td>{{move.type}}</td>
+               <td>{{move.localType}}</td>
                <td>{{move.power}}</td>
                <td>{{move.durationMS}}</td>
                <td ng-switch-when="true"><b>{{move.dps*1.25 | number:2}}</b></td>
@@ -73,7 +73,7 @@
              </tr>
              <tr ng-repeat="move in pokemon['Charge/Special Moves']" ng-switch on="stab(pokemon, move)">
                <td>{{move.localName}}<small>({{move.displayName}})</small></td>
-               <td>{{move.type}}</td>
+               <td>{{move.localType}}</td>
                <td>{{move.power}}</td>
                <td>{{move.durationMS}}</td>
                <td ng-switch-when="true"><b>{{move.dps*1.25 | number:2}}</b></td>
