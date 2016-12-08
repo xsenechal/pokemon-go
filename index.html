@@ -86,7 +86,8 @@
    </table>
 
   <div ng-switch-when=2>
-    Pokemon to fight:<input type="text" ng-model="versus.defensor"><button ng-click="computeVersus()">GO!</button>
+    Pokemon to fight:
+    <select ng-options="pokemon as pokemon.localName for pokemon in pokemons track by pokemon.localName" ng-model="versus.pokeDefensor" ng-change="computeVersus()"></select>
     <div ng-if="versus.pokeDefensor!=null">
       <div>
         <table>

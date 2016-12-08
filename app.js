@@ -35,10 +35,9 @@ function MyCtrl($scope, $filter,$http) {
 
 	$scope.computeVersus = function(){
 		$scope.versus.pokemons = [];
-		if($scope.versus.defensor == ""){
-			$scope.versus.pokeDefensor = null;
-		}else{
-			$scope.versus.pokeDefensor = $filter('filter')($scope.pokemons, {"localName":$scope.versus.defensor})[0];
+		if($scope.versus.pokeDefensor){
+			
+			//$scope.versus.pokeDefensor = $filter('filter')($scope.pokemons, {"localName":$scope.versus.defensor})[0];
 			var defensorHealth = ($scope.versus.pokeDefensor.BaseStamina + 15) * cpM;
 			angular.forEach($scope.pokemons, function(pokemon){
 				var fromDefensor = [];
