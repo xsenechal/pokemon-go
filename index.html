@@ -36,7 +36,7 @@
          <td>{{$index+1}}</td>
          <td>{{pokemon.Id}}</td>
          <td><img ng-src="img/{{pokemon.Id}}.png"></td>
-         <td><div>{{pokemon.localName}}</div><div><small>({{pokemon.Name}})</small></div></td>
+         <td><div style="cursor: pointer;" ng-click="setDisplay(2);versus.pokeDefensor=pokemon;computeVersus();">{{pokemon.localName}}</div><div><small>({{pokemon.Name}})</small></div></td>
          <td><div>{{pokemon.localType1}}</div><div ng-hide="pokemon.Type2=='None'">{{pokemon.localType2}}</div></td>
          <td>{{pokemon.BaseAttack}}</td>
          <td>{{pokemon.BaseDefense}}</td>
@@ -203,7 +203,7 @@
                   </tr>
                 </table>
               </td>
-              <td>{{pokemon.rated | number:2}}</td>
+              <td>{{pokemon.rated -1 | number:2}}</td>
             </tr>
           </tbody>
         </table>
