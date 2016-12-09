@@ -23,6 +23,10 @@ function MyCtrl($scope, $filter,$http) {
 	$scope.filter = "Id";
 	$scope.reverse = false;
 
+	$scope.setDisplay = function(i){
+		$scope.display = i;	
+	}
+	
 	$scope.stab = function(pokemon, move){
 		return move.type.toUpperCase() == pokemon.Type1.toUpperCase() || move.type.toUpperCase() == pokemon.Type2.toUpperCase()
 	};
