@@ -3,7 +3,7 @@ var myApp = angular.module('myApp',[]);
 //myApp.directive('myDirective', function() {});
 //myApp.factory('myService', function() {});
 
-function MyCtrl($scope, $filter,$http) {
+myApp.controller('MyCtrl', function($scope, $filter,$http) {
 
 	var efficiency;
 	var cpM = 0.79030001;
@@ -135,4 +135,4 @@ function MyCtrl($scope, $filter,$http) {
 			});
 		});
 	});
-}
+});
