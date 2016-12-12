@@ -33,16 +33,16 @@
      </thead>
      <tbody>
        <tr ng-repeat="pokemon in pokemons | orderBy: filter: reverse" ng-if="showLegendary || !pokemon.Legendary">
-         <td>{{$index+1}}</td>
-         <td>{{pokemon.Id}}</td>
-         <td><img ng-src="img/{{pokemon.Id}}.png"></td>
-         <td><div style="cursor: pointer;" ng-click="setDisplay(2);versus.pokeDefensor=pokemon;computeVersus();">{{pokemon.localName}}</div><div><small>({{pokemon.Name}})</small></div></td>
-         <td><div>{{pokemon.localType1}}</div><div ng-hide="pokemon.Type2=='None'">{{pokemon.localType2}}</div></td>
-         <td>{{pokemon.BaseAttack}}</td>
-         <td>{{pokemon.BaseDefense}}</td>
-         <td>{{pokemon.BaseStamina}}</td>
-         <td>{{pokemon.sum}}</td>
-         <td>{{pokemon.prod}}</td>
+         <td>{{::$index+1}}</td>
+         <td>{{::pokemon.Id}}</td>
+         <td><img ng-src="img/{{::pokemon.Id}}.png"></td>
+         <td><div style="cursor: pointer;" ng-click="setDisplay(2);versus.pokeDefensor=pokemon;computeVersus();">{{::pokemon.localName}}</div><div><small>({{::pokemon.Name}})</small></div></td>
+         <td><div>{{::pokemon.localType1}}</div><div ng-hide="pokemon.Type2=='None'">{{::pokemon.localType2}}</div></td>
+         <td>{{::pokemon.BaseAttack}}</td>
+         <td>{{::pokemon.BaseDefense}}</td>
+         <td>{{::pokemon.BaseStamina}}</td>
+         <td>{{::pokemon.sum}}</td>
+         <td>{{::pokemon.prod}}</td>
          <td>
            <table>
              <tr>
@@ -53,12 +53,12 @@
                <th>DPS</th>
              </tr>
              <tr ng-repeat="move in pokemon['Quick Moves']" ng-switch on="stab(pokemon, move)">
-               <td>{{move.localName}}<small>({{move.displayName}})</small></td>
-               <td>{{move.localType}}</td>
-               <td>{{move.power}}</td>
-               <td>{{move.durationMS}}</td>
-               <td ng-switch-when="true"><b>{{move.dps*1.25 | number:2}}</b></td>
-               <td ng-switch-when="false">{{move.dps}}</td>
+               <td>{{::move.localName}}<small>({{::move.displayName}})</small></td>
+               <td>{{::move.localType}}</td>
+               <td>{{::move.power}}</td>
+               <td>{{::move.durationMS}}</td>
+               <td ng-switch-when="true"><b>{{::move.dps*1.25 | number:2}}</b></td>
+               <td ng-switch-when="false">{{::move.dps}}</td>
              </tr>
            </table>
          </td>
@@ -72,12 +72,12 @@
                <th>DPS</th>
              </tr>
              <tr ng-repeat="move in pokemon['Charge/Special Moves']" ng-switch on="stab(pokemon, move)">
-               <td>{{move.localName}}<small>({{move.displayName}})</small></td>
-               <td>{{move.localType}}</td>
-               <td>{{move.power}}</td>
-               <td>{{move.durationMS}}</td>
-               <td ng-switch-when="true"><b>{{move.dps*1.25 | number:2}}</b></td>
-               <td ng-switch-when="false">{{move.dps}}</td>
+               <td>{{::move.localName}}<small>({{::move.displayName}})</small></td>
+               <td>{{::move.localType}}</td>
+               <td>{{::move.power}}</td>
+               <td>{{::move.durationMS}}</td>
+               <td ng-switch-when="true"><b>{{::move.dps*1.25 | number:2}}</b></td>
+               <td ng-switch-when="false">{{::move.dps}}</td>
              </tr>
            </table>
            </td>
@@ -105,15 +105,15 @@
             <th>Special moves</th>
           </tr>
           <tr>
-            <td>{{versus.pokeDefensor.Id}}</td>
+            <td>{{::versus.pokeDefensor.Id}}</td>
             <td><img ng-src="img/{{versus.pokeDefensor.Id}}.png"></td>
-            <td><div>{{versus.pokeDefensor.localName}}</div><div><small>{{versus.pokeDefensor.Name}}</small></div></td>
-            <td><div>{{versus.pokeDefensor.Type1}}</div><div ng-hide="versus.pokeDefensor.Type2=='None'">{{versus.pokeDefensor.Type2}}</div></td>
-            <td>{{versus.pokeDefensor.BaseAttack}}</td>
-            <td>{{versus.pokeDefensor.BaseDefense}}</td>
-            <td>{{versus.pokeDefensor.BaseStamina}}</td>
-            <td>{{versus.pokeDefensor.sum}}</td>
-            <td>{{versus.pokeDefensor.prod}}</td>
+            <td><div>{{::versus.pokeDefensor.localName}}</div><div><small>{{::versus.pokeDefensor.Name}}</small></div></td>
+            <td><div>{{::versus.pokeDefensor.Type1}}</div><div ng-hide="versus.pokeDefensor.Type2=='None'">{{::versus.pokeDefensor.Type2}}</div></td>
+            <td>{{::versus.pokeDefensor.BaseAttack}}</td>
+            <td>{{::versus.pokeDefensor.BaseDefense}}</td>
+            <td>{{::versus.pokeDefensor.BaseStamina}}</td>
+            <td>{{::versus.pokeDefensor.sum}}</td>
+            <td>{{::versus.pokeDefensor.prod}}</td>
             <td>
               <table>
                 <tr>
@@ -124,12 +124,12 @@
                   <th>DPS</th>
                 </tr>
                 <tr ng-repeat="move in versus.pokeDefensor['Quick Moves']" ng-switch on="stab(versus.pokeDefensor, move)">
-                  <td>{{move.localName}}<small>({{move.displayName}})</small></td>
-                  <td>{{move.type}}</td>
-                  <td>{{move.power}}</td>
-                  <td>{{move.durationMS}}</td>
-                  <td ng-switch-when="true"><b>{{move.dps*1.25 | number:2}}</b></td>
-                  <td ng-switch-when="false">{{move.dps}}</td>
+                  <td>{{::move.localName}}<small>({{::move.displayName}})</small></td>
+                  <td>{{::move.type}}</td>
+                  <td>{{::move.power}}</td>
+                  <td>{{::move.durationMS}}</td>
+                  <td ng-switch-when="true"><b>{{::move.dps*1.25 | number:2}}</b></td>
+                  <td ng-switch-when="false">{{::move.dps}}</td>
                 </tr>
               </table>
             </td>
@@ -143,12 +143,12 @@
                   <th>DPS</th>
                 </tr>
                 <tr ng-repeat="move in versus.pokeDefensor['Charge/Special Moves']" ng-switch on="stab(versus.pokeDefensor, move)">
-                  <td>{{move.localName}}<small>({{move.displayName}})</small></td>
-                  <td>{{move.type}}</td>
-                  <td>{{move.power}}</td>
-                  <td>{{move.durationMS}}</td>
-                  <td ng-switch-when="true"><b>{{move.dps*1.25 | number:2}}</b></td>
-                  <td ng-switch-when="false">{{move.dps}}</td>
+                  <td>{{::move.localName}}<small>({{::move.displayName}})</small></td>
+                  <td>{{::move.type}}</td>
+                  <td>{{::move.power}}</td>
+                  <td>{{::move.durationMS}}</td>
+                  <td ng-switch-when="true"><b>{{::move.dps*1.25 | number:2}}</b></td>
+                  <td ng-switch-when="false">{{::move.dps}}</td>
                 </tr>
               </table>
             </td>
@@ -171,24 +171,24 @@
               <th>Damage</th>
               <th>DPS</th>
               <th>HLPS</th>
-              <th>From {{versus.pokeDefensor.localName}}</th>
+              <th>From {{::versus.pokeDefensor.localName}}</th>
               <th>Rated</th>
             </tr>
           </thead>
           <tbody>
             <tr ng-repeat="pokemon in versus.pokemons | orderBy: 'rated': true" ng-if="showLegendary || !pokemon.Legendary">
-              <td>{{$index+1}}</td>
-              <td>{{pokemon.Id}}</td>
+              <td>{{::$index+1}}</td>
+              <td>{{::pokemon.Id}}</td>
               <td><img ng-src="img/{{pokemon.Id}}.png"></td>
-              <td><div>{{pokemon.localName}}</div><div><small>({{pokemon.Name}})</small></div></td>
-              <td><div>{{pokemon.Type1}}</div><div ng-hide="pokemon.Type2=='None'">{{pokemon.Type2}}</div></td>
-              <td>{{pokemon.BaseAttack}}</td>
-              <td>{{pokemon.BaseDefense}}</td>
-              <td>{{pokemon.BaseStamina}}</td>
-              <td><div>{{pokemon.moveLocalName}}</div><div>({{pokemon.moveName}})</div></td>
-              <td>{{pokemon.damage}}</td>
-              <td>{{pokemon.dps | number:2}}</td>
-              <td>{{pokemon.healthLost | number:2}}%</td>
+              <td><div>{{::pokemon.localName}}</div><div><small>({{::pokemon.Name}})</small></div></td>
+              <td><div>{{::pokemon.Type1}}</div><div ng-hide="pokemon.Type2=='None'">{{::pokemon.Type2}}</div></td>
+              <td>{{::pokemon.BaseAttack}}</td>
+              <td>{{::pokemon.BaseDefense}}</td>
+              <td>{{::pokemon.BaseStamina}}</td>
+              <td><div>{{::pokemon.moveLocalName}}</div><div><small>({{::pokemon.moveName}})</small></div></td>
+              <td>{{::pokemon.damage}}</td>
+              <td>{{::pokemon.dps | number:2}}</td>
+              <td>{{::pokemon.healthLost | number:2}}%</td>
               <td>
                 <table>
                   <tr>
@@ -197,13 +197,13 @@
                     <th>HLPS</th>
                   </tr>
                   <tr ng-repeat="income in pokemon.income track by $index">
-                    <td>{{income.localName}}</td>
-                    <td>{{income.dps | number:2}}</td>
-                    <td>{{income.healthLost | number:2}}%</td>
+                    <td>{{::income.localName}}</td>
+                    <td>{{::income.dps | number:2}}</td>
+                    <td>{{::income.healthLost | number:2}}%</td>
                   </tr>
                 </table>
               </td>
-              <td>{{pokemon.rated -1 | number:2}}</td>
+              <td>{{::pokemon.rated -1 | number:2}}</td>
             </tr>
           </tbody>
         </table>
