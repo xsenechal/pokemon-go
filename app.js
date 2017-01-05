@@ -6,7 +6,7 @@ var myApp = angular.module('myApp',[]);
 myApp.controller('MyCtrl', function($scope, $filter,$http) {
 
 	var efficiency;
-	var cpM = 0.79030001;
+	//var cpM = 0.79030001;
 	
 	var average = function(fromDefensor){
 		var sum = 0;
@@ -36,18 +36,28 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 		var e2 = efficiency[move.type.toUpperCase()]?efficiency[move.type.toUpperCase()][pokemon.Type2.toUpperCase()] || 1:1;
 		return e1*e2;
 	};
-
+	
+	$scope.computeDamage = function(A, M, D, Al, Dl){
+		var attack = (A.BaseAttack+15)*$scope.cpM(Al);
+		var defence = (D.BaseDefense+15)*$scope.cpM(Dl);
+		return Math.floor(0.5*M.power*attack/defence*($scope.stab(A, M)?1.25:1)*$scope.efficiency(M, D))+1;
+	};
+	
+	$scope.cpM = function(lvl){
+		return 0.79030001;	
+	};
+	
 	$scope.computeVersus = function(){
 		$scope.versus.pokemons = [];
 		if($scope.versus.pokeDefensor){
 			
 			//$scope.versus.pokeDefensor = $filter('filter')($scope.pokemons, {"localName":$scope.versus.defensor})[0];
-			var defensorHealth = ($scope.versus.pokeDefensor.BaseStamina + 15) * cpM;
+			var defensorHealth = ($scope.versus.pokeDefensor.BaseStamina + 15) * $scope.cpM(40);
 			angular.forEach($scope.pokemons, function(pokemon){
 				var fromDefensor = [];
-				var health = (pokemon.BaseStamina + 15) * cpM;
+				var health = (pokemon.BaseStamina + 15) * $scope.cpM(40);
 				angular.forEach($scope.versus.pokeDefensor['Quick Moves'], function(move){
-					var defensorDps = (Math.floor((((($scope.versus.pokeDefensor.BaseAttack+15)*move.power)/(pokemon.BaseDefense+15))/2)*($scope.stab($scope.versus.pokeDefensor, move)?1.25:1)*$scope.efficiency(move, pokemon))+1)/2;
+					var defensorDps = $scope.computeDamage($scope.versus.pokeDefensor, move, pokemon, 40, 40)/2;
 					fromDefensor.push({
 						localName: move.localName,
 						dps: defensorDps,
@@ -56,7 +66,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
           			});
 				var averageHealthLost = average(fromDefensor);
         			angular.forEach(pokemon['Quick Moves'], function(move){
-          				var dmg = Math.floor(((((pokemon.BaseAttack+15)*move.power)/($scope.versus.pokeDefensor.BaseDefense+15))/2)*($scope.stab(pokemon, move)?1.25:1)*$scope.efficiency(move, $scope.versus.pokeDefensor))+1;
+          				var dmg = $scope.computeDamage(pokemon, move, $scope.versus.pokeDefensor, 40, 40);
 					var dps = dmg/+(move.durationMS.replace(',', '')) * 1000;
             				$scope.versus.pokemons.push({
 						Id: pokemon.Id, 
