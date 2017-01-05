@@ -155,8 +155,9 @@
           </tr>
         </table>
       </div>
-      Defender <input ng-model="lvl.D" ng-change="computeVersus()">
-      Attacker <input ng-model="lvl.A" ng-change="computeVersus()">
+      Defender <input ng-model="lvl.D">
+      Attacker <input ng-model="lvl.A">
+      <button ng-click="computeVersus()">Compute</button>
       <div>
         <table>
           <thead>
