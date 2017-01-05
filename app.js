@@ -15,7 +15,8 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 		});
 		return sum / fromDefensor.length;
 	}
-
+	
+	$scope.lvl = {A: 40, D: 40};
 	$scope.display=1;
 	$scope.versus = {defensor: "", pokeDefensor: null, pokemons: []};
 	//$scope.defensor = "Bulbasaur";
@@ -52,12 +53,12 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 		if($scope.versus.pokeDefensor){
 			
 			//$scope.versus.pokeDefensor = $filter('filter')($scope.pokemons, {"localName":$scope.versus.defensor})[0];
-			var defensorHealth = ($scope.versus.pokeDefensor.BaseStamina + 15) * $scope.cpM(40);
+			var defensorHealth = ($scope.versus.pokeDefensor.BaseStamina + 15) * $scope.cpM($scope.lvl.D);
 			angular.forEach($scope.pokemons, function(pokemon){
 				var fromDefensor = [];
-				var health = (pokemon.BaseStamina + 15) * $scope.cpM(40);
+				var health = (pokemon.BaseStamina + 15) * $scope.cpM($scope.lvl.A);
 				angular.forEach($scope.versus.pokeDefensor['Quick Moves'], function(move){
-					var defensorDps = $scope.computeDamage($scope.versus.pokeDefensor, move, pokemon, 40, 40)/2;
+					var defensorDps = $scope.computeDamage($scope.versus.pokeDefensor, move, pokemon, $scope.lvl.D, $scope.lvl.A)/2;
 					fromDefensor.push({
 						localName: move.localName,
 						dps: defensorDps,
@@ -66,7 +67,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
           			});
 				var averageHealthLost = average(fromDefensor);
         			angular.forEach(pokemon['Quick Moves'], function(move){
-          				var dmg = $scope.computeDamage(pokemon, move, $scope.versus.pokeDefensor, 40, 40);
+          				var dmg = $scope.computeDamage(pokemon, move, $scope.versus.pokeDefensor, $scope.lvl.A, $scope.lvl.D);
 					var dps = dmg/+(move.durationMS.replace(',', '')) * 1000;
             				$scope.versus.pokemons.push({
 						Id: pokemon.Id, 
