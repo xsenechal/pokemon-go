@@ -45,7 +45,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	};
 	
 	$scope.cpM = function(lvl){
-		return cpM[lvl];	
+		return cpM[+lvl];	
 	};
 	
 	$scope.computeVersus = function(){
