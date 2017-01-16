@@ -33,7 +33,7 @@
      </thead>
      <tbody>
        <tr ng-repeat="pokemon in pokemons | orderBy: filter: reverse" ng-if="showLegendary || !pokemon.Legendary">
-         <td>{{::$index+1}}</td>
+         <td>{{$index+1}}</td>
          <td>{{::pokemon.Id}}</td>
          <td><img ng-src="img/{{::pokemon.Id}}.png"></td>
          <td><div style="cursor: pointer;" ng-click="setDisplay(2);versus.pokeDefensor=pokemon;computeVersus();">{{::pokemon.localName}}</div><div><small>({{::pokemon.Name}})</small></div></td>
