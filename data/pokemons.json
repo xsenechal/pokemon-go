@@ -35,6 +35,7 @@
 		"BaseAttack": 116,
 		"BaseDefense": 96,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -44,6 +45,7 @@
 		"BaseAttack": 158,
 		"BaseDefense": 129,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -63,6 +65,7 @@
 		"BaseAttack": 94,
 		"BaseDefense": 122,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -72,6 +75,7 @@
 		"BaseAttack": 126,
 		"BaseDefense": 155,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -81,6 +85,7 @@
 		"BaseAttack": 171,
 		"BaseDefense": 210,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -90,6 +95,7 @@
 		"BaseAttack": 55,
 		"BaseDefense": 62,
 		"Type1": "Bug",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -99,6 +105,7 @@
 		"BaseAttack": 45,
 		"BaseDefense": 94,
 		"Type1": "Bug",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -178,6 +185,7 @@
 		"BaseAttack": 103,
 		"BaseDefense": 70,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -187,6 +195,7 @@
 		"BaseAttack": 161,
 		"BaseDefense": 144,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -216,6 +225,7 @@
 		"BaseAttack": 110,
 		"BaseDefense": 102,
 		"Type1": "Poison",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -225,6 +235,7 @@
 		"BaseAttack": 167,
 		"BaseDefense": 158,
 		"Type1": "Poison",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -234,6 +245,7 @@
 		"BaseAttack": 112,
 		"BaseDefense": 101,
 		"Type1": "Electric",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -243,6 +255,7 @@
 		"BaseAttack": 193,
 		"BaseDefense": 165,
 		"Type1": "Electric",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -252,6 +265,7 @@
 		"BaseAttack": 126,
 		"BaseDefense": 145,
 		"Type1": "Ground",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -261,6 +275,7 @@
 		"BaseAttack": 182,
 		"BaseDefense": 202,
 		"Type1": "Ground",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -270,6 +285,7 @@
 		"BaseAttack": 86,
 		"BaseDefense": 94,
 		"Type1": "Poison",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -279,6 +295,7 @@
 		"BaseAttack": 117,
 		"BaseDefense": 126,
 		"Type1": "Poison",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -298,6 +315,7 @@
 		"BaseAttack": 105,
 		"BaseDefense": 76,
 		"Type1": "Poison",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -307,6 +325,7 @@
 		"BaseAttack": 137,
 		"BaseDefense": 112,
 		"Type1": "Poison",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -326,6 +345,7 @@
 		"BaseAttack": 107,
 		"BaseDefense": 116,
 		"Type1": "Fairy",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -335,6 +355,7 @@
 		"BaseAttack": 178,
 		"BaseDefense": 171,
 		"Type1": "Fairy",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -344,6 +365,7 @@
 		"BaseAttack": 96,
 		"BaseDefense": 122,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -353,6 +375,7 @@
 		"BaseAttack": 169,
 		"BaseDefense": 204,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -472,6 +495,7 @@
 		"BaseAttack": 109,
 		"BaseDefense": 88,
 		"Type1": "Ground",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -481,6 +505,7 @@
 		"BaseAttack": 167,
 		"BaseDefense": 147,
 		"Type1": "Ground",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -490,6 +515,7 @@
 		"BaseAttack": 92,
 		"BaseDefense": 81,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -499,6 +525,7 @@
 		"BaseAttack": 150,
 		"BaseDefense": 139,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -508,6 +535,7 @@
 		"BaseAttack": 122,
 		"BaseDefense": 96,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -517,6 +545,7 @@
 		"BaseAttack": 191,
 		"BaseDefense": 163,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -526,6 +555,7 @@
 		"BaseAttack": 148,
 		"BaseDefense": 87,
 		"Type1": "Fighting",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -535,6 +565,7 @@
 		"BaseAttack": 207,
 		"BaseDefense": 144,
 		"Type1": "Fighting",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -544,6 +575,7 @@
 		"BaseAttack": 136,
 		"BaseDefense": 96,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -553,6 +585,7 @@
 		"BaseAttack": 227,
 		"BaseDefense": 166,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -562,6 +595,7 @@
 		"BaseAttack": 101,
 		"BaseDefense": 82,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -571,6 +605,7 @@
 		"BaseAttack": 130,
 		"BaseDefense": 130,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -590,6 +625,7 @@
 		"BaseAttack": 195,
 		"BaseDefense": 103,
 		"Type1": "Psychic",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -599,6 +635,7 @@
 		"BaseAttack": 232,
 		"BaseDefense": 138,
 		"Type1": "Psychic",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -608,6 +645,7 @@
 		"BaseAttack": 271,
 		"BaseDefense": 194,
 		"Type1": "Psychic",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -617,6 +655,7 @@
 		"BaseAttack": 137,
 		"BaseDefense": 88,
 		"Type1": "Fighting",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -626,6 +665,7 @@
 		"BaseAttack": 177,
 		"BaseDefense": 130,
 		"Type1": "Fighting",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -635,6 +675,7 @@
 		"BaseAttack": 234,
 		"BaseDefense": 162,
 		"Type1": "Fighting",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -724,6 +765,7 @@
 		"BaseAttack": 170,
 		"BaseDefense": 132,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -733,6 +775,7 @@
 		"BaseAttack": 207,
 		"BaseDefense": 167,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -812,6 +855,7 @@
 		"BaseAttack": 85,
 		"BaseDefense": 128,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -831,6 +875,7 @@
 		"BaseAttack": 135,
 		"BaseDefense": 90,
 		"Type1": "Poison",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -840,6 +885,7 @@
 		"BaseAttack": 190,
 		"BaseDefense": 184,
 		"Type1": "Poison",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -849,6 +895,7 @@
 		"BaseAttack": 116,
 		"BaseDefense": 168,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -908,6 +955,7 @@
 		"BaseAttack": 89,
 		"BaseDefense": 158,
 		"Type1": "Psychic",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -917,6 +965,7 @@
 		"BaseAttack": 144,
 		"BaseDefense": 215,
 		"Type1": "Psychic",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -926,6 +975,7 @@
 		"BaseAttack": 181,
 		"BaseDefense": 156,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -935,6 +985,7 @@
 		"BaseAttack": 240,
 		"BaseDefense": 214,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -944,6 +995,7 @@
 		"BaseAttack": 109,
 		"BaseDefense": 114,
 		"Type1": "Electric",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -953,6 +1005,7 @@
 		"BaseAttack": 173,
 		"BaseDefense": 179,
 		"Type1": "Electric",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -982,6 +1035,7 @@
 		"BaseAttack": 90,
 		"BaseDefense": 165,
 		"Type1": "Ground",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -991,6 +1045,7 @@
 		"BaseAttack": 144,
 		"BaseDefense": 200,
 		"Type1": "Ground",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1000,6 +1055,7 @@
 		"BaseAttack": 224,
 		"BaseDefense": 211,
 		"Type1": "Fighting",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1009,6 +1065,7 @@
 		"BaseAttack": 193,
 		"BaseDefense": 212,
 		"Type1": "Fighting",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1018,6 +1075,7 @@
 		"BaseAttack": 108,
 		"BaseDefense": 137,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1027,6 +1085,7 @@
 		"BaseAttack": 119,
 		"BaseDefense": 164,
 		"Type1": "Poison",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1036,6 +1095,7 @@
 		"BaseAttack": 174,
 		"BaseDefense": 221,
 		"Type1": "Poison",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1065,6 +1125,7 @@
 		"BaseAttack": 60,
 		"BaseDefense": 176,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1074,6 +1135,7 @@
 		"BaseAttack": 183,
 		"BaseDefense": 205,
 		"Type1": "Grass",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1083,6 +1145,7 @@
 		"BaseAttack": 181,
 		"BaseDefense": 165,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1092,6 +1155,7 @@
 		"BaseAttack": 129,
 		"BaseDefense": 125,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1101,6 +1165,7 @@
 		"BaseAttack": 187,
 		"BaseDefense": 182,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1110,6 +1175,7 @@
 		"BaseAttack": 123,
 		"BaseDefense": 115,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1119,6 +1185,7 @@
 		"BaseAttack": 175,
 		"BaseDefense": 154,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1128,6 +1195,7 @@
 		"BaseAttack": 137,
 		"BaseDefense": 112,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1177,6 +1245,7 @@
 		"BaseAttack": 198,
 		"BaseDefense": 173,
 		"Type1": "Electric",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1186,6 +1255,7 @@
 		"BaseAttack": 206,
 		"BaseDefense": 169,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1195,6 +1265,7 @@
 		"BaseAttack": 238,
 		"BaseDefense": 197,
 		"Type1": "Bug",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1204,6 +1275,7 @@
 		"BaseAttack": 198,
 		"BaseDefense": 197,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1213,6 +1285,7 @@
 		"BaseAttack": 29,
 		"BaseDefense": 102,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1242,6 +1315,7 @@
 		"BaseAttack": 91,
 		"BaseDefense": 91,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1251,6 +1325,7 @@
 		"BaseAttack": 104,
 		"BaseDefense": 121,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1260,6 +1335,7 @@
 		"BaseAttack": 205,
 		"BaseDefense": 177,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1269,6 +1345,7 @@
 		"BaseAttack": 232,
 		"BaseDefense": 201,
 		"Type1": "Electric",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1278,6 +1355,7 @@
 		"BaseAttack": 246,
 		"BaseDefense": 204,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1287,6 +1365,7 @@
 		"BaseAttack": 153,
 		"BaseDefense": 139,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1346,6 +1425,7 @@
 		"BaseAttack": 190,
 		"BaseDefense": 190,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1385,6 +1465,7 @@
 		"BaseAttack": 119,
 		"BaseDefense": 94,
 		"Type1": "Dragon",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1394,6 +1475,7 @@
 		"BaseAttack": 163,
 		"BaseDefense": 138,
 		"Type1": "Dragon",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1413,6 +1495,7 @@
 		"BaseAttack": 330,
 		"BaseDefense": 200,
 		"Type1": "Psychic",
+		"Type2": "None",
 		"Legendary": true,
 		"Gen2": false
 	}, {
@@ -1422,6 +1505,7 @@
 		"BaseAttack": 210,
 		"BaseDefense": 210,
 		"Type1": "Psychic",
+		"Type2": "None",
 		"Legendary": true,
 		"Gen2": false
 	}, {
@@ -1431,6 +1515,7 @@
 		"BaseAttack": 92,
 		"BaseDefense": 122,
 		"Type1": "Grass",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1440,6 +1525,7 @@
 		"BaseAttack": 122,
 		"BaseDefense": 155,
 		"Type1": "Grass",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1449,6 +1535,7 @@
 		"BaseAttack": 168,
 		"BaseDefense": 202,
 		"Type1": "Grass",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1458,6 +1545,7 @@
 		"BaseAttack": 116,
 		"BaseDefense": 96,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1467,6 +1555,7 @@
 		"BaseAttack": 158,
 		"BaseDefense": 129,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1476,6 +1565,7 @@
 		"BaseAttack": 223,
 		"BaseDefense": 176,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1485,6 +1575,7 @@
 		"BaseAttack": 117,
 		"BaseDefense": 116,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1494,6 +1585,7 @@
 		"BaseAttack": 150,
 		"BaseDefense": 151,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1503,6 +1595,7 @@
 		"BaseAttack": 205,
 		"BaseDefense": 197,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1512,6 +1605,7 @@
 		"BaseAttack": 79,
 		"BaseDefense": 77,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1521,6 +1615,7 @@
 		"BaseAttack": 148,
 		"BaseDefense": 130,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1620,6 +1715,7 @@
 		"BaseAttack": 77,
 		"BaseDefense": 63,
 		"Type1": "Electric",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1629,6 +1725,7 @@
 		"BaseAttack": 75,
 		"BaseDefense": 91,
 		"Type1": "Fairy",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1648,6 +1745,7 @@
 		"BaseAttack": 67,
 		"BaseDefense": 116,
 		"Type1": "Fairy",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -1687,6 +1785,7 @@
 		"BaseAttack": 114,
 		"BaseDefense": 82,
 		"Type1": "Electric",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1696,6 +1795,7 @@
 		"BaseAttack": 145,
 		"BaseDefense": 112,
 		"Type1": "Electric",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1705,6 +1805,7 @@
 		"BaseAttack": 211,
 		"BaseDefense": 172,
 		"Type1": "Electric",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1714,6 +1815,7 @@
 		"BaseAttack": 169,
 		"BaseDefense": 189,
 		"Type1": "Grass",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1743,6 +1845,7 @@
 		"BaseAttack": 167,
 		"BaseDefense": 198,
 		"Type1": "Rock",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1752,6 +1855,7 @@
 		"BaseAttack": 174,
 		"BaseDefense": 192,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1791,6 +1895,7 @@
 		"BaseAttack": 136,
 		"BaseDefense": 112,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1800,6 +1905,7 @@
 		"BaseAttack": 55,
 		"BaseDefense": 55,
 		"Type1": "Grass",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1809,6 +1915,7 @@
 		"BaseAttack": 185,
 		"BaseDefense": 148,
 		"Type1": "Grass",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1848,6 +1955,7 @@
 		"BaseAttack": 261,
 		"BaseDefense": 194,
 		"Type1": "Psychic",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1857,6 +1965,7 @@
 		"BaseAttack": 126,
 		"BaseDefense": 250,
 		"Type1": "Dark",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1886,6 +1995,7 @@
 		"BaseAttack": 167,
 		"BaseDefense": 167,
 		"Type1": "Ghost",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1895,6 +2005,7 @@
 		"BaseAttack": 136,
 		"BaseDefense": 91,
 		"Type1": "Psychic",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1904,6 +2015,7 @@
 		"BaseAttack": 60,
 		"BaseDefense": 106,
 		"Type1": "Psychic",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1923,6 +2035,7 @@
 		"BaseAttack": 108,
 		"BaseDefense": 146,
 		"Type1": "Bug",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1942,6 +2055,7 @@
 		"BaseAttack": 131,
 		"BaseDefense": 131,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1971,6 +2085,7 @@
 		"BaseAttack": 137,
 		"BaseDefense": 89,
 		"Type1": "Fairy",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -1980,6 +2095,7 @@
 		"BaseAttack": 212,
 		"BaseDefense": 137,
 		"Type1": "Fairy",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2039,6 +2155,7 @@
 		"BaseAttack": 142,
 		"BaseDefense": 93,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2048,6 +2165,7 @@
 		"BaseAttack": 236,
 		"BaseDefense": 144,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2057,6 +2175,7 @@
 		"BaseAttack": 118,
 		"BaseDefense": 71,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2106,6 +2225,7 @@
 		"BaseAttack": 127,
 		"BaseDefense": 69,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2115,6 +2235,7 @@
 		"BaseAttack": 197,
 		"BaseDefense": 141,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2184,6 +2305,7 @@
 		"BaseAttack": 107,
 		"BaseDefense": 107,
 		"Type1": "Ground",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2193,6 +2315,7 @@
 		"BaseAttack": 214,
 		"BaseDefense": 214,
 		"Type1": "Ground",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2202,6 +2325,7 @@
 		"BaseAttack": 198,
 		"BaseDefense": 183,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2211,6 +2335,7 @@
 		"BaseAttack": 192,
 		"BaseDefense": 132,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2220,6 +2345,7 @@
 		"BaseAttack": 40,
 		"BaseDefense": 88,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2229,6 +2355,7 @@
 		"BaseAttack": 64,
 		"BaseDefense": 64,
 		"Type1": "Fighting",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2238,6 +2365,7 @@
 		"BaseAttack": 173,
 		"BaseDefense": 214,
 		"Type1": "Fighting",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2257,6 +2385,7 @@
 		"BaseAttack": 135,
 		"BaseDefense": 110,
 		"Type1": "Electric",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -2266,6 +2395,7 @@
 		"BaseAttack": 151,
 		"BaseDefense": 108,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": false
 	}, {
@@ -2275,6 +2405,7 @@
 		"BaseAttack": 157,
 		"BaseDefense": 211,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2284,6 +2415,7 @@
 		"BaseAttack": 129,
 		"BaseDefense": 229,
 		"Type1": "Normal",
+		"Type2": "None",
 		"Legendary": false,
 		"Gen2": true
 	}, {
@@ -2293,6 +2425,7 @@
 		"BaseAttack": 241,
 		"BaseDefense": 210,
 		"Type1": "Electric",
+		"Type2": "None",
 		"Legendary": true,
 		"Gen2": true
 	}, {
@@ -2302,6 +2435,7 @@
 		"BaseAttack": 235,
 		"BaseDefense": 176,
 		"Type1": "Fire",
+		"Type2": "None",
 		"Legendary": true,
 		"Gen2": true
 	}, {
@@ -2311,6 +2445,7 @@
 		"BaseAttack": 180,
 		"BaseDefense": 235,
 		"Type1": "Water",
+		"Type2": "None",
 		"Legendary": true,
 		"Gen2": true
 	}, {
