@@ -23,6 +23,10 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	//$scope.pokeDefensor = null;
 	$scope.filter = "Id";
 	$scope.reverse = false;
+	
+	$scope.pourcent = function(val, max){
+		return (+val/max)*100;
+	};
 
 	$scope.setDisplay = function(i){
 		$scope.display = i;	
