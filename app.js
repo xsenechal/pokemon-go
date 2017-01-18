@@ -111,7 +111,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 			pokemon["Charge/Special Moves"] = [];
 			pokemon["localName"] = $scope.pokemonsTranslation[pokemon.Id];
       pokemon["localType1"] = $scope.typesTranslation[pokemon.Type1];
-      pokemon["localType2"] = $scope.typesTranslation[pokemon.Type2];      
+      pokemon["localType2"] = $scope.typesTranslation[pokemon.Type2.replace(/\b\w/g, function(l){ return l.toUpperCase() })];      
 		});
 
 		angular.forEach($scope.moves, function(move){
