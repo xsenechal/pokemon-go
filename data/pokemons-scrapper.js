@@ -16,6 +16,8 @@ $.each(species, function(i, specie){
 	var Type2 = types[1];
 	if(Type2){
         Type2 = Type2.replace(/\b\w/g, function(l){ return l.toUpperCase() });
+	}else{
+		Type2 = "None";
 	}
 
 	var Legendary 	= $(specie).hasClass("legendary");
