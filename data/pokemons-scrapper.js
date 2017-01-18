@@ -12,8 +12,11 @@ $.each(species, function(i, specie){
 
 
 	var types = $.map($(specie).find(".monTypes div"), function(div){ return div.textContent})
-	var Type1 = types[0];
+	var Type1 = types[0].replace(/\b\w/g, function(l){ return l.toUpperCase() });
 	var Type2 = types[1];
+	if(Type2){
+        Type2 = Type2.replace(/\b\w/g, function(l){ return l.toUpperCase() });
+	}
 
 	var Legendary 	= $(specie).hasClass("legendary");
 	var Gen2 		= $(specie).hasClass("gen2");
