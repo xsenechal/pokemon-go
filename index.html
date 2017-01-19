@@ -13,6 +13,7 @@
      <button ng-click="display=1;versus.defensor='';computeVersus();">Pokedex</button>
      <button ng-click="display=2;versus.defensor='';computeVersus();">Versus</button>
      <input type="checkbox" ng-model="showLegendary">Afficher les légendaires
+     <input type="checkbox" ng-model="showGen2">Afficher la génération 2
    </div>
    <table ng-switch-when=1>
      <thead>
@@ -32,7 +33,7 @@
        </tr>
      </thead>
      <tbody>
-       <tr ng-repeat="pokemon in pokemons | orderBy: filter: reverse" ng-if="showLegendary || !pokemon.Legendary">
+       <tr ng-repeat="pokemon in pokemons | myFilterPokemon: showLegendary: showGen2 | orderBy: filter: reverse " >
          <td>{{$index+1}}</td>
          <td>{{::pokemon.Id}}</td>
          <td><img ng-src="img/{{::pokemon.Id}}.png"></td>
