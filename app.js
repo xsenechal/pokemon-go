@@ -40,6 +40,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	//$scope.pokeDefensor = null;
 	$scope.filter = "Id";
 	$scope.reverse = false;
+	$scope.showGen2 = true;
 
 	$scope.pourcent = function(val, max){
 		return (+val/max)*100;
