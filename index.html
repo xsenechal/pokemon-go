@@ -126,7 +126,7 @@
                 </tr>
                 <tr ng-repeat="move in versus.pokeDefensor['Quick Moves']" ng-switch on="stab(versus.pokeDefensor, move)">
                   <td>{{::move.localName}}<small>({{::move.displayName}})</small></td>
-                  <td>{{::move.type}}</td>
+                  <td>{{::move.localType}}</td>
                   <td>{{::move.power}}</td>
                   <td>{{::move.durationMS}}</td>
                   <td ng-switch-when="true"><b>{{::move.dps*1.25 | number:2}}</b></td>
@@ -145,7 +145,7 @@
                 </tr>
                 <tr ng-repeat="move in versus.pokeDefensor['Charge/Special Moves']" ng-switch on="stab(versus.pokeDefensor, move)">
                   <td>{{::move.localName}}<small>({{::move.displayName}})</small></td>
-                  <td>{{::move.type}}</td>
+                  <td>{{::move.localType}}</td>
                   <td>{{::move.power}}</td>
                   <td>{{::move.durationMS}}</td>
                   <td ng-switch-when="true"><b>{{::move.dps*1.25 | number:2}}</b></td>
