@@ -80,12 +80,14 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 				var fromDefensor = [];
 				var health = (pokemon.BaseStamina + 15) * $scope.cpM($scope.lvl.A);
 				angular.forEach($scope.versus.pokeDefensor['Quick Moves'], function(move){
-					var defensorDps = $scope.computeDamage($scope.versus.pokeDefensor, move, pokemon, $scope.lvl.D, $scope.lvl.A)/2;
-					fromDefensor.push({
-						localName: move.localName,
-						dps: defensorDps,
-						healthLost: defensorDps / health * 100}
-					);
+					if(move.selected){
+						var defensorDps = $scope.computeDamage($scope.versus.pokeDefensor, move, pokemon, $scope.lvl.D, $scope.lvl.A)/2;
+						fromDefensor.push({
+							localName: move.localName,
+							dps: defensorDps,
+							healthLost: defensorDps / health * 100}
+						);
+					}
           			});
 				var averageHealthLost = average(fromDefensor);
         			angular.forEach(pokemon['Quick Moves'], function(move){
@@ -95,8 +97,8 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 						Id: pokemon.Id,
 						Name: pokemon.Name,
 						localName: pokemon.localName,
-						Type1: pokemon.Type1,
-						Type2: pokemon.Type2,
+						Type1: pokemon.localType1,
+						Type2: pokemon.localType2,
 						BaseAttack: pokemon.BaseAttack,
 						BaseDefense: pokemon.BaseDefense,
 						BaseStamina: pokemon.BaseStamina,
@@ -134,6 +136,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 		});
 
 		angular.forEach($scope.moves, function(move){
+			move.selected = true;
 			move['displayName'] = ""
 			var tmp = move.name.split("_");
 			angular.forEach(tmp, function(part){
