@@ -135,6 +135,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 
 		angular.forEach($scope.moves, function(move){
 			move['displayName'] = move.name.toLowerCase().replace(/\b\w/g, function(l){ return l.toUpperCase() });
+			move['displayName'] = move['displayName'].replace("_", " ");
 			move['localName'] = $scope.movesTranslation[move['displayName']];
       move['displayType'] = move.type.toLowerCase().replace(/\b\w/g, function(l){ return l.toUpperCase() });
       move['localType'] = $scope.typesTranslation[move['displayType']];
