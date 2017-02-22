@@ -108,7 +108,7 @@
           <tr>
             <td>{{versus.pokeDefensor.Id}}</td>
             <td><img ng-src="img/{{versus.pokeDefensor.Id}}.png"></td>
-            <td><div>{{versus.pokeDefensor.localName}}</div><div><small>{{versus.pokeDefensor.Name}}</small></div></td>
+            <td><div>{{versus.pokeDefensor.localName}}</div><div><small>({{versus.pokeDefensor.Name}})</small></div></td>
             <td><div>{{versus.pokeDefensor.Type1}}</div><div ng-hide="versus.pokeDefensor.Type2=='None'">{{versus.pokeDefensor.Type2}}</div></td>
             <td>{{versus.pokeDefensor.BaseAttack}}</td>
             <td>{{versus.pokeDefensor.BaseDefense}}</td>
@@ -118,6 +118,7 @@
             <td>
               <table>
                 <tr>
+                  <th></th>
                   <th>Name</th>
                   <th>Type</th>
                   <th>Power</th>
@@ -125,6 +126,7 @@
                   <th>DPS</th>
                 </tr>
                 <tr ng-repeat="move in versus.pokeDefensor['Quick Moves']" ng-switch on="stab(versus.pokeDefensor, move)">
+                  <td><input type="checkbox" ng-model="move.selected"></td>
                   <td>{{::move.localName}}<small>({{::move.displayName}})</small></td>
                   <td>{{::move.localType}}</td>
                   <td>{{::move.power}}</td>
