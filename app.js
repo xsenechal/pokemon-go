@@ -40,6 +40,8 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	//$scope.pokeDefensor = null;
 	$scope.filter = "Id";
 	$scope.reverse = false;
+	$scope.filter2 = "rated";
+	$scope.reverse2 = true;
 	$scope.showGen2 = true;
 
 	$scope.pourcent = function(val, max){
@@ -120,6 +122,11 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	$scope.orderBy = function(value){
 		$scope.filter = value;
 		$scope.reverse = !$scope.reverse;
+	};
+	
+	$scope.order2By = function(value){
+		$scope.filter2 = value;
+		$scope.reverse2 = !$scope.reverse2;
 	};
 
 	$scope.runTime = function(){
