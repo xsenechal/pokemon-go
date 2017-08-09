@@ -175,14 +175,14 @@
               <th>Stamina</th>
               <th>Move</th>
               <th>Damage</th>
-              <th>DPS</th>
+              <th ng-click="order2By('dps')">DPS</th>
               <th>HLPS</th>
               <th>From {{versus.pokeDefensor.localName}}</th>
-              <th>Rated</th>
+              <th ng-click="order2By('rated')">Rated</th>
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="pokemon in versus.pokemons | orderBy: 'rated': true" ng-if="showLegendary || !pokemon.Legendary">
+            <tr ng-repeat="pokemon in versus.pokemons | orderBy: filter2: reverse2" ng-if="showLegendary || !pokemon.Legendary">
               <td>{{::$index+1}}</td>
               <td>{{::pokemon.Id}}</td>
               <td><img ng-src="img/{{pokemon.Id}}.png"></td>
