@@ -226,10 +226,7 @@
       </tr>
       <tr ng-repeat="(type, values) in efficiencyTypes">
         <td>{{type}}</td>
-        <th ng-repeat="(type2, values2) in efficiencyTypes">
-          <span ng-if="values[type2] && values[type2]<1" style="background-color: red;">{{values[type2]}}</span>
-          <span ng-if="values[type2] && values[type2]>1" style="background-color: green;">{{values[type2]}}</span>
-        </th>
+        <th ng-repeat="(type2, values2) in efficiencyTypes"style="background-color: {{(values[type2] && values[type2]<1)?'red':((values[type2] && values[type2]>1)?'green':'white')}};"></th>
       </tr>
     </table>
   </div>
