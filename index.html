@@ -222,7 +222,14 @@
     <table>
       <tr>
         <th></th>
-        <th ng-repeat="(value,type) in efficiencyTypes">{{type}}</th>
+        <th ng-repeat="(type, values) in efficiencyTypes">{{type}}</th>
+      </tr>
+      <tr ng-repeat="(type, values) in efficiencyTypes">
+        <td>{{type}}</td>
+        <th ng-repeat="(type2, values2) in efficiencyTypes">
+          <span ng-if="values[type2] && values[type2]<1" style="background-color: red;">{{values[type2]}}</span>
+          <span ng-if="values[type2] && values[type2]>1" style="background-color: green;">{{values[type2]}}</span>
+        </th>
       </tr>
     </table>
   </div>
