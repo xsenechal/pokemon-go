@@ -12,6 +12,7 @@
    <div>
      <button ng-click="display=1;versus.defensor='';computeVersus();">Pokedex</button>
      <button ng-click="display=2;versus.defensor='';computeVersus();">Versus</button>
+     <button ng-click="display=3;versus.defensor='';computeVersus();">Efficiency</button>
      <input type="checkbox" ng-model="showLegendary">Afficher les légendaires
      <input type="checkbox" ng-model="showGen2">Afficher la génération 2
    </div>
@@ -215,6 +216,15 @@
         </table>
       </div>
     </div>
+  </div>
+  <div ng-switch-when=3>
+    Efficiency
+    <table>
+      <tr>
+        <th></th>
+        <th ng-repeat="type in efficiencyTypes">{{type}}</th>
+      </tr>
+    </table>
   </div>
 </div>
 
