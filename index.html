@@ -222,11 +222,11 @@
     <table>
       <tr>
         <th></th>
-        <th ng-repeat="(type, values) in efficiencyTypes" ng-style="{'background-color': (selectedColumn(type)?'lightblue':'white')}">{{type}}</th>
+        <th ng-repeat="(type, values) in efficiencyTypes" ng-style="{'background-color': (selectedColumn[type]?'lightblue':'white')}">{{type}}</th>
       </tr>
       <tr ng-style="{'background-color': (selected?'lightblue':'white')}" ng-repeat="(type, values) in efficiencyTypes" ng-click="selected=!selected">
         <td>{{type}}</td>
-        <th ng-repeat="(type2, values2) in efficiencyTypes" ng-click="toggleColumn(type)" style="background-color: {{(values[type2] && values[type2]<1)?'red':((values[type2] && values[type2]>1)?'green':(selectedColumn(type)?'lightblue':'inherit'))}};"></th>
+        <th ng-repeat="(type2, values2) in efficiencyTypes" ng-click="toggleColumn(type)" style="background-color: {{(values[type2] && values[type2]<1)?'red':((values[type2] && values[type2]>1)?'green':(selectedColumn[type]?'lightblue':'inherit'))}};"></th>
       </tr>
     </table>
   </div>
