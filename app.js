@@ -42,6 +42,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	$scope.reverse2 = true;
 	$scope.showGen2 = true;
 	$scope.efficiencyTypes;
+	$scope.selectedColumn = {};
 
 	$scope.pourcent = function(val, max){
 		return (+val/max)*100;
@@ -126,6 +127,10 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	$scope.order2By = function(value){
 		$scope.filter2 = value;
 		$scope.reverse2 = !$scope.reverse2;
+	};
+	
+	$scope.toggleColumn = function(type){
+		$scope.selectedColumn[type] = !$scope.selectedColumn[type];
 	};
 
 	$scope.runTime = function(){
