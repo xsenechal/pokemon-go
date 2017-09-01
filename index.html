@@ -224,7 +224,7 @@
         <th></th>
         <th ng-repeat="(type, values) in efficiencyTypes">{{type}}</th>
       </tr>
-      <tr ng-repeat="(type, values) in efficiencyTypes">
+      <tr ng-style="{'background-color': selected?'lightblue':'white'}" ng-repeat="(type, values) in efficiencyTypes" ng-click="selected=!selected">
         <td>{{type}}</td>
         <th ng-repeat="(type2, values2) in efficiencyTypes"style="background-color: {{(values[type2] && values[type2]<1)?'red':((values[type2] && values[type2]>1)?'green':'white')}};"></th>
       </tr>
