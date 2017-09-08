@@ -1,9 +1,9 @@
 [{
 	"Id": 150,
 	"Name": "Mewtwo",
-	"BaseStamina": 212,
-	"BaseAttack": 330,
-	"BaseDefense": 200,
+	"BaseStamina": 193,
+	"BaseAttack": 300,
+	"BaseDefense": 182,
 	"Type1": "Psychic",
 	"Type2": "None",
 	"Legendary": true,
