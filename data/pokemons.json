@@ -12,9 +12,9 @@
 {
 	"Id": 250,
 	"Name": "Ho-Oh",
-	"BaseStamina": 212,
-	"BaseAttack": 263,
-	"BaseDefense": 301,
+	"BaseStamina": 193,
+	"BaseAttack": 239,
+	"BaseDefense": 274,
 	"Type1": "Fire",
 	"Type2": "Flying",
 	"Legendary": true,
