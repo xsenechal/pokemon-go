@@ -1,0 +1,38 @@
+//https://rankedboost.com/pokemon-go/gen-3-pokedex/
+
+/********************inject tools************************/
+var s = document.createElement('script');
+s.type = 'text/javascript';
+s.src = 'https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js';
+document.getElementsByTagName('head')[0].appendChild(s);
+
+var s = document.createElement('script');
+s.type = 'text/javascript';
+s.src = 'https://cdn.jsdelivr.net/lodash/4.17.2/lodash.min.js';
+document.getElementsByTagName('head')[0].appendChild(s);
+/********************inject tools************************/
+
+var pokemons = [];
+var index = 252;
+var rows = $('#gg').find("tbody").find("tr");
+
+_.each(rows, function(poke){
+	var pokemon = {};
+	var type1 = $(poke).find(".pokemontypes")[0].className.split(' ')[1].split('-')[0];
+	var type2 = $(poke).find(".pokemontypes")[1].className.split(' ')[1].split('-')[0];
+	pokemon.Id = index++;
+	pokemon.Name = $(poke).find(".PokemonName").text();
+	pokemon.Type1 = type1.substr(0, 1).toUpperCase() + type1.substr(1);
+	pokemon.Type2 = type2 !== ""?type2.substr(0, 1).toUpperCase() + type2.substr(1):"None";
+	pokemon.BaseAttack = +$($(poke).find(".ver_line_outer.atk")[0].parentNode).text()*2;
+	pokemon.BaseDefense = +$($(poke).find(".ver_line_outer.def")[0].parentNode).text()*2;
+	pokemon.BaseStamina = +$($(poke).find(".ver_line_outer.stam")[0].parentNode).text();
+	pokemon.cp = $($(poke).find(".ver_line_outer.cp")[0].parentNode).text();
+	pokemon.Gen2 = false;
+	pokemon.Gen3 = true;
+	pokemon.Legendary = index > 377;
+
+	pokemons.push(pokemon);
+});
+
+console.log(JSON.stringify(pokemons));
