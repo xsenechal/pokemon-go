@@ -617,7 +617,8 @@
 	"172",
 	"177",
 	"193",
-	"225"]
+	"225",
+	"289"]
 },
 {
 	"category": "Quick Moves",
@@ -817,7 +818,8 @@
 	"176",
 	"201",
 	"233",
-	"245"]
+	"245",
+	"289"]
 },
 {
 	"category": "Quick Moves",
@@ -1303,7 +1305,8 @@
 	"217",
 	"233",
 	"242",
-	"251"]
+	"251",
+	"289"]
 },
 {
 	"category": "Charge/Special Moves",
@@ -2836,7 +2839,8 @@
 	"damageWindow": "400",
 	"pokemons": ["98",
 	"99",
-	"127"]
+	"127",
+	"289"]
 },
 {
 	"category": "Charge/Special Moves",
@@ -2923,7 +2927,8 @@
 	"129",
 	"132",
 	"201",
-	"235"]
+	"235",
+	"289"]
 },
 {
 	"category": "Charge/Special Moves",
@@ -2973,7 +2978,8 @@
 	"power": "25",
 	"durationMS": "2,900",
 	"damageWindow": "650",
-	"pokemons": []
+	"pokemons": [
+	"289"]
 },
 {
 	"category": "Charge/Special Moves",
@@ -2983,5 +2989,6 @@
 	"power": "25",
 	"durationMS": "2,900",
 	"damageWindow": "650",
-	"pokemons": []
+	"pokemons": [
+	"289"]
 }]
