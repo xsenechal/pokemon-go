@@ -3,12 +3,12 @@ var myApp = angular.module('myApp',[]);
 //myApp.directive('myDirective', function() {});
 //myApp.factory('myService', function() {});
 myApp.filter('myFilterPokemon', function () {
-    return function (pokemons, showLegendary, showGen2) {
+    return function (pokemons, showLegendary, showGen3) {
 				if(!pokemons) return pokemons;
 	      var result = [];
 
 	      angular.forEach(pokemons, function(pokemon){
-					if(!showGen2 && pokemon.Gen2){
+					if(!showGen3 && pokemon.Gen3){
 						return false;
 					}
 					if(!showLegendary && pokemon.Legendary){
@@ -40,7 +40,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	$scope.reverse = false;
 	$scope.filter2 = "rated";
 	$scope.reverse2 = true;
-	$scope.showGen2 = true;
+	$scope.showGen3 = true;
 	$scope.efficiencyTypes;
 	$scope.selectedColumn = {};
 
