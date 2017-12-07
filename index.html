@@ -14,7 +14,7 @@
      <button ng-click="display=2;versus.defensor='';computeVersus();">Versus</button>
      <button ng-click="display=3;versus.defensor='';computeVersus();">Efficiency</button>
      <input type="checkbox" ng-model="showLegendary">Afficher les légendaires
-     <input type="checkbox" ng-model="showGen2">Afficher la génération 2
+     <input type="checkbox" ng-model="showGen3">Afficher la génération 3
    </div>
    <table ng-switch-when=1>
      <thead>
@@ -34,7 +34,7 @@
        </tr>
      </thead>
      <tbody>
-       <tr ng-repeat="pokemon in pokemons | myFilterPokemon: showLegendary: showGen2 | orderBy: filter: reverse " >
+       <tr ng-repeat="pokemon in pokemons | myFilterPokemon: showLegendary: showGen3 | orderBy: filter: reverse " >
          <td>{{$index+1}}</td>
          <td>{{::pokemon.Id}}</td>
          <td><img ng-src="img/{{::pokemon.Id}}.png"></td>
