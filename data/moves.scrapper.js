@@ -8,7 +8,7 @@ document.getElementsByTagName('head')[0].appendChild(s);
 /******************* Inject tools ****************************/
 
 var _moves = [];
-var moves = $("#moves table .statRow")
+var moves = $("tr.hidden-xs.statRow")
 
 _.each(moves, function(move){
   //var move = moves[0]
