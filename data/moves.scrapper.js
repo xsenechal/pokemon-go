@@ -29,7 +29,7 @@ _.each(moves, function(move){
 
   var power         = $(move).find("td")[2].textContent
   var durationMS    = $(move).find("td")[3].textContent
-  var damageWindow  = $(move).find("td")[4].textContent
+  var damageWindow  = $(move).find("td")[4].textContent.trim()
 
   var pokemons = _.map($(move.nextElementSibling).find(".text-center > img"), function(img){return img.src.split('/')[7].replace('.png', '') })
   var _move = {
