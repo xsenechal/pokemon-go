@@ -21,7 +21,8 @@ $.each(species, function(i, specie){
 	}
 
 	var Legendary 	= $(specie).hasClass("legendary");
-	var Gen2 		= $(specie).hasClass("gen2");
+	var Gen2 	= $(specie).hasClass("gen2");
+	var Gen3 	= $(specie).hasClass("gen3");
 
 	var progressBars = $(specie).find(".row-fluid .row-fluid");$(specie).find(".row-fluid .row-fluid")
 
@@ -38,7 +39,8 @@ $.each(species, function(i, specie){
 	"Type1": Type1,
 	"Type2": Type2,
 	"Legendary": Legendary,
-	"Gen2": Gen2
+	"Gen2": Gen2,
+	"Gen3": Gen3
 	})
 	
 });
