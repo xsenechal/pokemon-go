@@ -118,6 +118,39 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 			});
 		}
 	};
+	
+	$scope.analysePokemon = function(pokemon){
+		var analyseMoveSet = function(pokemon, quickMove, chargeMove){
+			var time = 0;
+			var dmg = 0;
+			var nrj = 0;
+			while (true){
+				var usedMove = quickMove;
+				nrj = Math.min(100, nrj + +usedMove.damageWindow);
+				if (nrj >= (+chargeMove.damageWindow*100/+chargeMove.power)){
+					usedMove = chargeMove;
+					nrj -= (+usedMove.damageWindow*100/+usedMove.power);
+				}
+				time += +usedMove.durationMS;
+				if (time <= 600){
+				   dmg += Math.floor(0.5*usedMove.power*pokemon.BaseAttack/146*($scope.stab(pokemon, usedMove)?1.25:1))+1;
+				}
+				else{
+					break;
+				}
+			}
+			return dmg/600;
+		};
+		
+		var res = {};
+		angular.forEach(pokemon['Quick Moves'], function(quickMove){
+			angular.forEach(pokemon['Charge/Special Moves'], function(chargeMove){
+				res[quickMove.localName+" | "+chargeMove.localName] = analyseMoveSet(pokemon, quickMove, chargeMove);
+			});
+		});
+		console.log(res);
+		return res;
+	};	
 
 	$scope.orderBy = function(value){
 		$scope.filter = value;
