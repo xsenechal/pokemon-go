@@ -127,19 +127,19 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 			while (true){
 				var usedMove = quickMove;
 				nrj = Math.min(100, nrj + +usedMove.damageWindow);
-				if (nrj >= (+chargeMove.damageWindow*100/+chargeMove.power)){
+				if (nrj >= (+chargeMove.power*100/+chargeMove.damageWindow)){
 					usedMove = chargeMove;
-					nrj -= (+usedMove.damageWindow*100/+usedMove.power);
+					nrj -= (+usedMove.power*100/+usedMove.damageWindow);
 				}
-				time += +usedMove.durationMS;
-				if (time <= 600){
+				time += +usedMove.durationMS.replace(',', '');
+				if (time <= 600000){
 				   dmg += Math.floor(0.5*usedMove.power*pokemon.BaseAttack/146*($scope.stab(pokemon, usedMove)?1.25:1))+1;
 				}
 				else{
 					break;
 				}
 			}
-			return dmg/600;
+			return dmg/600000;
 		};
 		
 		var res = {};
