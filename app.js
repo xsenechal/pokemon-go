@@ -139,7 +139,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 					break;
 				}
 			}
-			return dmg/600000;
+			return dmg/600;
 		};
 		
 		var res = {};
