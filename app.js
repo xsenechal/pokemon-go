@@ -145,7 +145,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 		var res = {};
 		angular.forEach(pokemon['Quick Moves'], function(quickMove){
 			angular.forEach(pokemon['Charge/Special Moves'], function(chargeMove){
-				res[quickMove.localName+" | "+chargeMove.localName] = analyseMoveSet(pokemon, quickMove, chargeMove);
+				res[(quickMove.localName||quickMove.name)+" | "+(chargeMove.localName||chargeMove.name)] = analyseMoveSet(pokemon, quickMove, chargeMove);
 			});
 		});
 		console.log(res);
