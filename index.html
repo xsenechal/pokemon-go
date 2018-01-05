@@ -183,7 +183,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-click="analysePokemon(pokemon, versus.pokeDefensor)" ng-repeat="pokemon in versus.pokemons | orderBy: filter2: reverse2" ng-if="showLegendary || !pokemon.Legendary">
+            <tr ng-click="analysePokemon(pokemons[pokemon.Id-1], versus.pokeDefensor)" ng-repeat="pokemon in versus.pokemons | orderBy: filter2: reverse2" ng-if="showLegendary || !pokemon.Legendary">
               <td>{{::$index+1}}</td>
               <td>{{::pokemon.Id}}</td>
               <td><img ng-src="img/{{pokemon.Id}}.png"></td>
