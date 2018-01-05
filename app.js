@@ -119,8 +119,8 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 		}
 	};
 	
-	$scope.analysePokemon = function(pokemon){
-		var analyseMoveSet = function(pokemon, quickMove, chargeMove){
+	$scope.analysePokemon = function(pokemonA, pokemonD){
+		var analyseMoveSet = function(A, quickMove, chargeMove, D, Al, Dl){
 			var time = 0;
 			var dmg = 0;
 			var nrj = 0;
@@ -133,7 +133,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 				}
 				time += +usedMove.durationMS.replace(',', '');
 				if (time <= 600000){
-					dmg += $scope.computeDamage(pokemon, usedMove, {BaseDefense: 146, Type1: 'null', Type2: 'null'}, 40, 40);
+					dmg += $scope.computeDamage(A, usedMove, D, Al, Dl);
 				   //dmg += Math.floor(0.5*usedMove.power*pokemon.BaseAttack/146*($scope.stab(pokemon, usedMove)?1.25:1))+1;
 				}
 				else{
@@ -144,9 +144,9 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 		};
 		
 		var res = {};
-		angular.forEach(pokemon['Quick Moves'], function(quickMove){
-			angular.forEach(pokemon['Charge/Special Moves'], function(chargeMove){
-				res[(quickMove.localName||quickMove.name)+" | "+(chargeMove.localName||chargeMove.name)] = analyseMoveSet(pokemon, quickMove, chargeMove);
+		angular.forEach(pokemonA['Quick Moves'], function(quickMove){
+			angular.forEach(pokemonA['Charge/Special Moves'], function(chargeMove){
+				res[(quickMove.localName||quickMove.name)+" | "+(chargeMove.localName||chargeMove.name)] = analyseMoveSet(pokemonA, quickMove, chargeMove, pokemonD, $scope.lvl.A, $scope.lvl.D);
 			});
 		});
 		console.log(res);
