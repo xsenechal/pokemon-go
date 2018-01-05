@@ -133,7 +133,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 				}
 				time += +usedMove.durationMS.replace(',', '');
 				if (time <= 600000){
-					dmg += $scope.computeDamage(pokemon, usedMove, {BaseDefense: 146}, 40, 40);
+					dmg += $scope.computeDamage(pokemon, usedMove, {BaseDefense: 146, Type1: 'null', Type2: 'null'}, 40, 40);
 				   //dmg += Math.floor(0.5*usedMove.power*pokemon.BaseAttack/146*($scope.stab(pokemon, usedMove)?1.25:1))+1;
 				}
 				else{
