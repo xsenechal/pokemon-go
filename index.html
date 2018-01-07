@@ -34,7 +34,7 @@
        </tr>
      </thead>
      <tbody>
-       <tr ng-click="analysePokemon(pokemon, {BaseDefense: 146, Type1: 'null', Type2: 'null'})" ng-repeat="pokemon in pokemons | myFilterPokemon: showLegendary: showGen3 | orderBy: filter: reverse " >
+       <tr ng-click="log(analysePokemon(pokemon, {BaseDefense: 146, Type1: 'null', Type2: 'null'}))" ng-repeat="pokemon in pokemons | myFilterPokemon: showLegendary: showGen3 | orderBy: filter: reverse " >
          <td>{{$index+1}}</td>
          <td>{{::pokemon.Id}}</td>
          <td><img ng-src="img/{{::pokemon.Id}}.png"></td>
@@ -175,7 +175,6 @@
               <th>Defense</th>
               <th>Stamina</th>
               <th>Move</th>
-              <th>Damage</th>
               <th ng-click="order2By('dps')">DPS</th>
               <th>HLPS</th>
               <th>From {{versus.pokeDefensor.localName}}</th>
@@ -183,7 +182,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-click="analysePokemon(pokemons[pokemon.Id-1], versus.pokeDefensor)" ng-repeat="pokemon in versus.pokemons | orderBy: filter2: reverse2" ng-if="showLegendary || !pokemon.Legendary">
+            <tr ng-click="log(analysePokemon(pokemons[pokemon.Id-1], versus.pokeDefensor))" ng-repeat="pokemon in versus.pokemons | orderBy: filter2: reverse2" ng-if="showLegendary || !pokemon.Legendary">
               <td>{{::$index+1}}</td>
               <td>{{::pokemon.Id}}</td>
               <td><img ng-src="img/{{pokemon.Id}}.png"></td>
@@ -193,7 +192,6 @@
               <td>{{::pokemon.BaseDefense}}</td>
               <td>{{::pokemon.BaseStamina}}</td>
               <td><div>{{::pokemon.moveLocalName}}</div><div><small>({{::pokemon.moveName}})</small></div></td>
-              <td>{{::pokemon.damage}}</td>
               <td>{{::pokemon.dps | number:2}}</td>
               <td>{{::pokemon.healthLost | number:2}}%</td>
               <td>
