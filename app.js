@@ -148,7 +148,6 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 				res[(quickMove.localName||quickMove.name)+" | "+(chargeMove.localName||chargeMove.name)] = analyseMoveSet(pokemonA, quickMove, chargeMove, pokemonD, $scope.lvl.A, $scope.lvl.D);
 			});
 		});
-		console.log(res);
 		return res;
 	};	
 
