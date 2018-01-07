@@ -92,9 +92,8 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 					}
           			});
 				var averageHealthLost = average(fromDefensor);
-        			angular.forEach(pokemon['Quick Moves'], function(move){
-          				var dmg = $scope.computeDamage(pokemon, move, $scope.versus.pokeDefensor, $scope.lvl.A, $scope.lvl.D);
-					var dps = dmg/+(move.durationMS.replace(',', '')) * 1000;
+				var tmp = $scope.analysePokemon(pokemon, $scope.versus.pokeDefensor);
+        			angular.forEach(tmp, function(dps, moves){
             				$scope.versus.pokemons.push({
 						Id: pokemon.Id,
 						Name: pokemon.Name,
@@ -104,15 +103,15 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 						BaseAttack: pokemon.BaseAttack,
 						BaseDefense: pokemon.BaseDefense,
 						BaseStamina: pokemon.BaseStamina,
-						moveName: move.name,
-						moveLocalName: move.localName,
-						damage: dmg,
+						moveName: moves,
+						moveLocalName: moves,
 						dps: dps,
 						healthLost: dps / defensorHealth * 100,
 						income: fromDefensor,
 						rated: (dps / defensorHealth * 100) / averageHealthLost,
 						Legendary:pokemon.Legendary,
-						Gen2:pokemon.Gen2}
+						Gen2:pokemon.Gen2,
+						Gen3:pokemon.Gen3}
 					);
           			});
 			});
