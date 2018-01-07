@@ -31,6 +31,10 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 		return sum / fromDefensor.length;
 	}
 
+	$scope.log = function(message){
+		console.log(message);
+	}
+	
 	$scope.lvl = {A: 40, D: 40};
 	$scope.display=1;
 	$scope.versus = {defensor: "", pokeDefensor: null, pokemons: []};
