@@ -110,9 +110,9 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 						moveName: moves,
 						moveLocalName: moves,
 						dps: dps,
-						healthLost: dps / defensorHealth * 100,
+						healthLost: dps / defensorHealth * 50,
 						income: fromDefensor,
-						rated: (dps / defensorHealth * 100) / averageHealthLost,
+						rated: (dps / defensorHealth * 50) / averageHealthLost,
 						Legendary:pokemon.Legendary,
 						Gen2:pokemon.Gen2,
 						Gen3:pokemon.Gen3}
