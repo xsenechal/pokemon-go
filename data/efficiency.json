@@ -1,158 +1,158 @@
 {
 	"NORMAL": {
-		"ROCK": 0.8,
-		"GHOST": 0.8,
-		"STEEL": 0.8
+		"ROCK": 0.714,
+		"GHOST": 0.51,
+		"STEEL": 0.714
 	},
 	"FIRE": {
-		"FIRE": 0.8,
-		"WATER": 0.8,
-		"GRASS": 1.25,
-		"ICE": 1.25,
-		"BUG": 1.25,
-		"ROCK": 0.8,
-		"DRAGON": 0.8,
-		"STEEL": 1.25
+		"FIRE": 0.714,
+		"WATER": 0.714,
+		"GRASS": 1.4,
+		"ICE": 1.4,
+		"BUG": 1.4,
+		"ROCK": 0.714,
+		"DRAGON": 0.714,
+		"STEEL": 1.4
 	},
 	"WATER": {
-		"FIRE": 1.25,
-		"WATER": 0.8,
-		"GRASS": 0.8,
-		"GROUND": 1.25,
-		"ROCK": 1.25,
-		"DRAGON": 0.8
+		"FIRE": 1.4,
+		"WATER": 0.714,
+		"GRASS": 0.714,
+		"GROUND": 1.4,
+		"ROCK": 1.4,
+		"DRAGON": 0.714
 	},
 	"GRASS": {
-		"FIRE": 0.8,
-		"WATER": 1.25,
-		"GRASS": 0.8,
-		"POISON": 0.8,
-		"GROUND": 1.25,
-		"FLYING": 0.8,
-		"BUG": 0.8,
-		"ROCK": 1.25,
-		"DRAGON": 0.8,
-		"STEEL": 0.8
+		"FIRE": 0.714,
+		"WATER": 1.4,
+		"GRASS": 0.714,
+		"POISON": 0.714,
+		"GROUND": 1.4,
+		"FLYING": 0.714,
+		"BUG": 0.714,
+		"ROCK": 1.4,
+		"DRAGON": 0.714,
+		"STEEL": 0.714
 	},
 	"ELECTRIC": {
-		"WATER": 1.25,
-		"GRASS": 0.8,
-		"ELECTRIC": 0.8,
-		"GROUND": 0.8,
-		"FLYING": 1.25,
-		"DRAGON": 0.8
+		"WATER": 1.4,
+		"GRASS": 0.714,
+		"ELECTRIC": 0.714,
+		"GROUND": 0.51,
+		"FLYING": 1.4,
+		"DRAGON": 0.714
 	},
 	"ICE": {
-		"FIRE": 0.8,
-		"WATER": 0.8,
-		"GRASS": 1.25,
-		"ICE": 0.8,
-		"GROUND": 1.25,
-		"FLYING": 1.25,
-		"DRAGON": 1.25,
-		"STEEL": 0.8
+		"FIRE": 0.714,
+		"WATER": 0.714,
+		"GRASS": 1.4,
+		"ICE": 0.714,
+		"GROUND": 1.4,
+		"FLYING": 1.4,
+		"DRAGON": 1.4,
+		"STEEL": 0.714
 	},
 	"FIGHTING": {
-		"NORMAL": 1.25,
-		"ICE": 1.25,
-		"POISON": 0.8,
-		"FLYING": 0.8,
-		"PSYCHIC": 0.8,
-		"BUG": 0.8,
-		"ROCK": 1.25,
-		"GHOST": 0.8,
-		"DARK": 1.25,
-		"STEEL": 1.25,
-		"FAIRY": 0.8
+		"NORMAL": 1.4,
+		"ICE": 1.4,
+		"POISON": 0.714,
+		"FLYING": 0.714,
+		"PSYCHIC": 0.714
+		"BUG": 0.714,
+		"ROCK": 1.4,
+		"GHOST": 0.51,
+		"DARK": 1.4,
+		"STEEL": 1.4,
+		"FAIRY": 0.714
 	},
 	"POISON": {
-		"GRASS": 1.25,
-		"POISON": 0.8,
-		"GROUND": 0.8,
-		"ROCK": 0.8,
-		"GHOST": 0.8,
-		"STEEL": 0.8,
-		"FAIRY": 1.25
+		"GRASS": 1.4,
+		"POISON": 0.714,
+		"GROUND": 0.714,
+		"ROCK": 0.714,
+		"GHOST": 0.714,
+		"STEEL": 0.51,
+		"FAIRY": 1.4
 	},
 	"GROUND": {
-		"FIRE": 1.25,
-		"GRASS": 0.8,
-		"ELECTRIC": 1.25,
-		"POISON": 1.25,
-		"FLYING": 0.8,
-		"BUG": 0.8,
-		"ROCK": 1.25,
-		"STEEL": 1.25
+		"FIRE": 1.4,
+		"GRASS": 0.714,
+		"ELECTRIC": 1.4,
+		"POISON": 1.4,
+		"FLYING": 0.51,
+		"BUG": 0.714,
+		"ROCK": 1.4,
+		"STEEL": 1.4
 	},
 	"FLYING": {
-		"GRASS": 1.25,
-		"ELECTRIC": 0.8,
-		"FIGHTING": 1.25,
-		"BUG": 1.25,
-		"ROCK": 0.8,
-		"STEEL": 0.8
+		"GRASS": 1.4,
+		"ELECTRIC": 0.714,
+		"FIGHTING": 1.4,
+		"BUG": 1.4,
+		"ROCK": 0.714,
+		"STEEL": 0.714
 	},
 	"PSYCHIC": {
-		"FIGHTING": 1.25,
-		"POISON": 1.25,
-		"PSYCHIC": 0.8,
-		"DARK": 0.8,
-		"STEEL": 0.8
+		"FIGHTING": 1.4,
+		"POISON": 1.4,
+		"PSYCHIC": 0.714,
+		"DARK": 0.51,
+		"STEEL": 0.714
 	},
 	"BUG": {
-		"FIRE": 0.8,
-		"GRASS": 1.25,
-		"FIGHTING": 0.8,
-		"POISON": 0.8,
-		"FLYING": 0.8,
-		"PSYCHIC": 1.25,
-		"GHOST": 0.8,
-		"DARK": 1.25,
-		"STEEL": 0.8,
-		"FAIRY": 0.8
+		"FIRE": 0.714,
+		"GRASS": 1.4,
+		"FIGHTING": 0.714,
+		"POISON": 0.714,
+		"FLYING": 0.714,
+		"PSYCHIC": 1.4,
+		"GHOST": 0.714,
+		"DARK": 1.4,
+		"STEEL": 0.714,
+		"FAIRY": 0.714
 	},
 	"ROCK": {
-		"FIRE": 1.25,
-		"ICE": 1.25,
-		"FIGHTING": 0.8,
-		"GROUND": 0.8,
-		"FLYING": 1.25,
-		"BUG": 1.25,
-		"STEEL": 0.8
+		"FIRE": 1.4,
+		"ICE": 1.4,
+		"FIGHTING": 0.714,
+		"GROUND": 0.714,
+		"FLYING": 1.4,
+		"BUG": 1.4,
+		"STEEL": 0.714
 	},
 	"GHOST": {
-		"NORMAL": 0.8,
-		"PSYCHIC": 1.25,
-		"GHOST": 1.25,
-		"DARK": 0.8
+		"NORMAL": 0.51,
+		"PSYCHIC": 1.4,
+		"GHOST": 1.4,
+		"DARK": 0.714
 	},
 	"DRAGON": {
-		"DRAGON": 1.25,
-		"STEEL": 0.8,
-		"FAIRY": 0.8
+		"DRAGON": 1.4,
+		"STEEL": 0.714,
+		"FAIRY": 0.51
 	},
 	"DARK": {
-		"FIGHTING": 0.8,
-		"PSYCHIC": 1.25,
-		"GHOST": 1.25,
-		"DARK": 0.8,
-		"FAIRY": 0.8
+		"FIGHTING": 0.714,
+		"PSYCHIC": 1.4,
+		"GHOST": 1.4,
+		"DARK": 0.714,
+		"FAIRY": 0.714
 	},
 	"STEEL": {
-		"FIRE": 0.8,
-		"WATER": 0.8,
-		"ELECTRIC": 0.8,
-		"ICE": 1.25,
-		"ROCK": 1.25,
-		"STEEL": 0.8,
-		"FAIRY": 1.25
+		"FIRE": 0.714,
+		"WATER": 0.714,
+		"ELECTRIC": 0.714,
+		"ICE": 1.4,
+		"ROCK": 1.4,
+		"STEEL": 0.714,
+		"FAIRY": 1.4
 	},
 	"FAIRY": {
-		"FIRE": 0.8,
-		"FIGHTING": 1.25,
-		"POISON": 0.8,
-		"DRAGON": 1.25,
-		"DARK": 1.25,
-		"STEEL": 0.8
+		"FIRE": 0.714,
+		"FIGHTING": 1.4,
+		"POISON": 0.714,
+		"DRAGON": 1.4,
+		"DARK": 1.4,
+		"STEEL": 0.714
 	}
 }
