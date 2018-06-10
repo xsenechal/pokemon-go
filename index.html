@@ -37,7 +37,8 @@
        <tr ng-click="log(analysePokemon(pokemon, {BaseDefense: 146, Type1: 'null', Type2: 'null'}))" ng-repeat="pokemon in pokemons | myFilterPokemon: showLegendary: showGen3 | orderBy: filter: reverse " >
          <td>{{$index+1}}</td>
          <td>{{::pokemon.Id}}</td>
-         <td><img ng-src="img/{{::pokemon.Id}}.png"></td>
+         <td><img ng-src="img/{{::pokemon.Id}}.png">
+             <button ng-click="analysePokemon(pokemon, {BaseDefense: 146, Type1: 'null', Type2: 'null'})">show</button></td>
          <td><div style="cursor: pointer;" ng-click="setDisplay(2);versus.pokeDefensor=pokemon;computeVersus();">{{::pokemon.localName}}</div><div><small>({{::pokemon.Name}})</small></div></td>
          <td><div>{{::pokemon.localType1}}</div><div ng-hide="pokemon.Type2=='None'">{{::pokemon.localType2}}</div></td>
          <td>{{::pokemon.BaseAttack}}</td>
