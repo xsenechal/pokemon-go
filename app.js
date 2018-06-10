@@ -32,7 +32,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	}
 
 	$scope.log = function(message){
-		console.log(message);
+		console.log(message);alert(message);
 	}
 	
 	$scope.lvl = {A: 40, D: 40};
