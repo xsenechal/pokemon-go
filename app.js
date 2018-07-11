@@ -180,6 +180,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 			pokemon["localName"] = $scope.pokemonsTranslation[pokemon.Id];
       pokemon["localType1"] = $scope.typesTranslation[pokemon.Type1];
       pokemon["localType2"] = $scope.typesTranslation[pokemon.Type2];
+			pokemon.Id = pokemon.Id+"";
 		});
 
 		angular.forEach($scope.moves, function(move){
