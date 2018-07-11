@@ -194,7 +194,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
       move['displayType'] = move.type.toLowerCase().replace(/\b\w/g, function(l){ return l.toUpperCase() });
       move['localType'] = $scope.typesTranslation[move['displayType']];
 			angular.forEach(move.pokemons, function(id){
-				var tmp = $filter('filter')($scope.pokemons, {Id: +id}, true);
+				var tmp = $filter('filter')($scope.pokemons, {Id: id}, true);
 				angular.forEach(tmp, function(pokemon){
 					pokemon[move.category].push(move);
 				});
