@@ -186,7 +186,7 @@
             <tr ng-click="log(analysePokemon(pokemons[pokemon.Id-1], versus.pokeDefensor))" ng-repeat="pokemon in versus.pokemons | orderBy: filter2: reverse2" ng-if="showLegendary || !pokemon.Legendary">
               <td>{{::$index+1}}</td>
               <td>{{::pokemon.Id}}</td>
-              <td><img ng-src="img/{{pokemon.Id}}.png"></td>
+              <td><img ng-src="img/{{pokemon.Id}}.png" height="96" width="96"></td>
               <td><div>{{::pokemon.localName}}</div><div><small>({{::pokemon.Name}})</small></div></td>
               <td><div>{{::pokemon.Type1}}</div><div ng-hide="pokemon.Type2=='None'">{{::pokemon.Type2}}</div></td>
               <td>{{::pokemon.BaseAttack}}</td>
