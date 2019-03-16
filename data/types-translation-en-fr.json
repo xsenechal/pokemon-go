@@ -16,5 +16,6 @@
 	"Ground": "Sol",
 	"Ghost": "Spectre",
 	"Dark": "Ténèbres",
-	"Flying": "Vol"
+	"Flying": "Vol",
+	"None": ""
 }

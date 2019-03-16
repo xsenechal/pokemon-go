@@ -47,6 +47,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	$scope.showGen3 = true;
 	$scope.efficiencyTypes;
 	$scope.selectedColumn = {};
+	$scope.search = {};
 
 	$scope.pourcent = function(val, max){
 		return (+val/max)*100;

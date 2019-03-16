@@ -9,14 +9,20 @@
 
 
     <div ng-controller="MyCtrl" ng-switch on="display">
-   <div>
+   <div style="margin-bottom: 10px;">
      <button ng-click="display=1;versus.defensor='';computeVersus();">Pokedex</button>
      <button ng-click="display=2;versus.defensor='';computeVersus();">Versus</button>
      <button ng-click="display=3;versus.defensor='';computeVersus();">Efficiency</button>
-     <input type="checkbox" ng-model="showLegendary">Afficher les légendaires
-     <input type="checkbox" ng-model="showGen3">Afficher la génération 3
    </div>
    <table ng-switch-when=1>
+     <label style="padding-right: 10px;">Name:</label>
+     <input ng-model="search.localName">
+     <label style="padding-right: 10px; padding-left: 10px;">Type1:</label>
+     <input ng-model="search.localType1">
+     <label style="padding-right: 10px; padding-left: 10px;">Type2:</label>
+     <input ng-model="search.localType2">
+     <label style="padding-right: 10px; padding-left: 10px;">Global:</label>
+     <input ng-model="search.$">
      <thead>
        <tr>
          <th style="cursor: auto;"></th>
@@ -34,18 +40,33 @@
        </tr>
      </thead>
      <tbody>
-       <tr ng-click="log(analysePokemon(pokemon, {BaseDefense: 146, Type1: 'null', Type2: 'null'}))" ng-repeat="pokemon in pokemons | myFilterPokemon: showLegendary: showGen3 | orderBy: filter: reverse " >
+       <tr ng-repeat="pokemon in pokemons  | filter: search | orderBy: filter: reverse " >
          <td>{{$index+1}}</td>
          <td>{{::pokemon.Id}}</td>
          <td><img ng-src="img/{{::pokemon.Id}}.png" height="96" width="96">
              <button ng-click="analysePokemon(pokemon, {BaseDefense: 146, Type1: 'null', Type2: 'null'})">show</button></td>
          <td><div style="cursor: pointer;" ng-click="setDisplay(2);versus.pokeDefensor=pokemon;computeVersus();">{{::pokemon.localName}}</div><div><small>({{::pokemon.Name}})</small></div></td>
          <td><div>{{::pokemon.localType1}}</div><div ng-hide="pokemon.Type2=='None'">{{::pokemon.localType2}}</div></td>
-         <td>{{::pokemon.BaseAttack}}</td>
-         <td>{{::pokemon.BaseDefense}}</td>
-         <td>{{::pokemon.BaseStamina}}</td>
-         <td><div>{{::pokemon.sum}}</div><div>({{pourcent(pokemon.sum, 736) | number: 2}}%)</div></td>
-         <td><div>{{::pokemon.prod}}</div><div>({{pourcent(pokemon.prod, 11552000) | number: 2}}%)</div></td>
+         <td>
+           <div>{{::pokemon.BaseAttack}}</div>
+           <div>({{pokemon.BaseAttack*100/(pokemon.BaseAttack+pokemon.BaseDefense+pokemon.BaseStamina) | number: 2}}%)</div>
+         </td>
+         <td>
+           <div>{{::pokemon.BaseDefense}}</div>
+           <div>({{pokemon.BaseDefense*100/(pokemon.BaseAttack+pokemon.BaseDefense+pokemon.BaseStamina) | number: 2}}%)</div>
+         </td>
+         <td>
+           <div>{{::pokemon.BaseStamina}}</div>
+           <div>({{pokemon.BaseStamina*100/(pokemon.BaseAttack+pokemon.BaseDefense+pokemon.BaseStamina) | number: 2}}%)</div>
+         </td>
+         <td>
+           <div>{{::pokemon.sum}}</div>
+           <div>({{pourcent(pokemon.sum, 736) | number: 2}}%)</div>
+         </td>
+         <td>
+           <div>{{::pokemon.prod}}</div>
+           <div>({{pourcent(pokemon.prod, 11552000) | number: 2}}%)</div>
+         </td>
          <td>
            <table>
              <tr>
@@ -56,7 +77,10 @@
                <th>DPS</th>
              </tr>
              <tr ng-repeat="move in pokemon['Quick Moves']" ng-switch on="stab(pokemon, move)">
-               <td>{{::move.localName}}<small>({{::move.displayName}})</small></td>
+               <td>
+                 <div>{{::move.localName}}</div>
+                 <div><small>({{::move.displayName}})</small></div>
+               </td>
                <td>{{::move.localType}}</td>
                <td>{{::move.power}}</td>
                <td>{{::move.durationMS}}</td>
@@ -75,7 +99,10 @@
                <th>DPS</th>
              </tr>
              <tr ng-repeat="move in pokemon['Charge/Special Moves']" ng-switch on="stab(pokemon, move)">
-               <td>{{::move.localName}}<small>({{::move.displayName}})</small></td>
+               <td>
+                 <div>{{::move.localName}}</div>
+                 <div><small>({{::move.displayName}})</small></div>
+               </td>
                <td>{{::move.localType}}</td>
                <td>{{::move.power}}</td>
                <td>{{::move.durationMS}}</td>
