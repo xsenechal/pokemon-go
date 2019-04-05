@@ -48,6 +48,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	$scope.efficiencyTypes;
 	$scope.selectedColumn = {};
 	$scope.search = {"localName": "None"};
+	$scope.values = {"pcMax" : 10000};
 
 	$scope.pourcent = function(val, max){
 		return (+val/max)*100;
@@ -74,7 +75,24 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	};
 
 	$scope.cpM = function(lvl){
-		return cpM[+lvl];
+	    if (+lvl == 100) {return 1;};
+		return cpM[+lvl*2-1];
+	};
+
+	$scope.computeAllPvp = function() {
+	    var computeLvl = function(pokemon, limit, lvl) {
+	        if (lvl == 40) {
+        	    return 40;
+        	}
+	        if (limit >= $scope.calcPC(pokemon, lvl)) {
+	            return computeLvl(pokemon, limit, lvl+0.5);
+	        } else {
+	            return lvl-0.5;
+	        }
+	    };
+	    angular.forEach($scope.pokemons, function(pokemon){
+	        pokemon.lvl = computeLvl(pokemon, +$scope.values.pcMax, 0.5);
+	    });
 	};
 
 	$scope.computeVersus = function(){
@@ -170,6 +188,18 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 		$scope.selectedColumn[type] = !$scope.selectedColumn[type];
 	};
 
+	$scope.calcAttack = function(pokemon) {
+	    return Math.floor((pokemon.BaseAttack)*$scope.cpM(pokemon.lvl))
+	};
+
+	$scope.calcDefense = function(pokemon) {
+	    return Math.floor((pokemon.BaseDefense)*$scope.cpM(pokemon.lvl))
+	};
+
+	$scope.calcStamina = function(pokemon) {
+	    return Math.floor((pokemon.BaseStamina)*$scope.cpM(pokemon.lvl))
+	};
+
 	$scope.runTime = function(){
 		angular.forEach($scope.pokemons, function(pokemon){
           		//pokemon.maxCP = pokemon["Max CP"];
@@ -181,6 +211,10 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 			pokemon["localName"] = $scope.pokemonsTranslation[pokemon.Id];
       pokemon["localType1"] = $scope.typesTranslation[pokemon.Type1];
       pokemon["localType2"] = $scope.typesTranslation[pokemon.Type2];
+      pokemon.lvl = 100;
+      pokemon.attack = function(){return $scope.calcAttack(pokemon)};
+      pokemon.defense = function(){return $scope.calcDefense(pokemon)};
+      pokemon.stamina = function(){return $scope.calcStamina(pokemon)};
 		});
 
 		angular.forEach($scope.moves, function(move){
@@ -202,6 +236,10 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 			});
 		});
 
+	};
+
+	$scope.calcPC = function(pokemon, lvl) {
+	    return Math.floor(Math.max((pokemon.BaseAttack)*Math.pow(pokemon.BaseDefense, 0.5)*Math.pow(pokemon.BaseStamina, 0.5)*Math.pow($scope.cpM(lvl+""), 2)/10, 10));
 	};
 
 	//__RUNTIME__
