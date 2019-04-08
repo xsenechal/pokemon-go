@@ -200,6 +200,12 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	    return Math.floor((pokemon.BaseStamina)*$scope.cpM(pokemon.lvl))
 	};
 
+    $scope.pvpReset = function(){
+        angular.forEach($scope.pokemons, function(pokemon){
+            pokemon.lvl = 100;
+        });
+    };
+
 	$scope.runTime = function(){
 		angular.forEach($scope.pokemons, function(pokemon){
           		//pokemon.maxCP = pokemon["Max CP"];

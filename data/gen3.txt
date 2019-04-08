@@ -13,7 +13,7 @@ document.getElementsByTagName('head')[0].appendChild(s);
 /********************inject tools************************/
 
 var pokemons = [];
-var index = 252;
+var index = 387;
 var rows = $('#gg').find("tbody").find("tr");
 
 _.each(rows, function(poke){
@@ -22,15 +22,14 @@ _.each(rows, function(poke){
 	var type2 = $(poke).find(".pokemontypes")[1].className.split(' ')[1].split('-')[0];
 	pokemon.Id = index++;
 	pokemon.Name = $(poke).find(".PokemonName").text();
+	pokemon.BaseStamina = +$($(poke).find(".ver_line_outer.stam")[0].parentNode).text();
+	pokemon.BaseAttack = +$($(poke).find(".ver_line_outer.atk")[0].parentNode).text();
+	pokemon.BaseDefense = +$($(poke).find(".ver_line_outer.def")[0].parentNode).text();
 	pokemon.Type1 = type1.substr(0, 1).toUpperCase() + type1.substr(1);
 	pokemon.Type2 = type2 !== ""?type2.substr(0, 1).toUpperCase() + type2.substr(1):"None";
-	pokemon.BaseAttack = +$($(poke).find(".ver_line_outer.atk")[0].parentNode).text()*2;
-	pokemon.BaseDefense = +$($(poke).find(".ver_line_outer.def")[0].parentNode).text()*2;
-	pokemon.BaseStamina = +$($(poke).find(".ver_line_outer.stam")[0].parentNode).text();
-	pokemon.cp = $($(poke).find(".ver_line_outer.cp")[0].parentNode).text();
+	pokemon.Legendary = index > 377;
 	pokemon.Gen2 = false;
 	pokemon.Gen3 = true;
-	pokemon.Legendary = index > 377;
 
 	pokemons.push(pokemon);
 });
