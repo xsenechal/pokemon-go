@@ -200,6 +200,10 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	    return Math.floor((pokemon.BaseStamina)*$scope.cpM(pokemon.lvl))
 	};
 
+	$scope.calcTankiness = function(pokemon) {
+	    return $scope.calcDefense(pokemon) * $scope.calcStamina(pokemon);
+	};
+
     $scope.pvpReset = function(){
         angular.forEach($scope.pokemons, function(pokemon){
             pokemon.lvl = 100;
@@ -215,12 +219,13 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 			pokemon["Quick Moves"] = [];
 			pokemon["Charge/Special Moves"] = [];
 			pokemon["localName"] = $scope.pokemonsTranslation[pokemon.Id];
-      pokemon["localType1"] = $scope.typesTranslation[pokemon.Type1];
-      pokemon["localType2"] = $scope.typesTranslation[pokemon.Type2];
-      pokemon.lvl = 100;
-      pokemon.attack = function(){return $scope.calcAttack(pokemon)};
-      pokemon.defense = function(){return $scope.calcDefense(pokemon)};
-      pokemon.stamina = function(){return $scope.calcStamina(pokemon)};
+            pokemon["localType1"] = $scope.typesTranslation[pokemon.Type1];
+            pokemon["localType2"] = $scope.typesTranslation[pokemon.Type2];
+            pokemon.lvl = 100;
+            pokemon.attack = function(){return $scope.calcAttack(pokemon)};
+            pokemon.defense = function(){return $scope.calcDefense(pokemon)};
+            pokemon.stamina = function(){return $scope.calcStamina(pokemon)};
+            pokemon.tankiness = function(){return $scope.calcTankiness(pokemon)};
 		});
 
 		angular.forEach($scope.moves, function(move){
@@ -232,8 +237,8 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 			});
 			move['displayName'] = move['displayName'].substring(1);
 			move['localName'] = $scope.movesTranslation[move['displayName']];
-      move['displayType'] = move.type.toLowerCase().replace(/\b\w/g, function(l){ return l.toUpperCase() });
-      move['localType'] = $scope.typesTranslation[move['displayType']];
+            move['displayType'] = move.type.toLowerCase().replace(/\b\w/g, function(l){ return l.toUpperCase() });
+            move['localType'] = $scope.typesTranslation[move['displayType']];
 			angular.forEach(move.pokemons, function(id){
 				var tmp = $filter('filter')($scope.pokemons, {Id: +id}, true);
 				angular.forEach(tmp, function(pokemon){
@@ -241,7 +246,6 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 				});
 			});
 		});
-
 	};
 
 	$scope.calcPC = function(pokemon, lvl) {
@@ -260,10 +264,10 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 					$scope.movesTranslation = data;
 					$http.get('data/pokemons-translation-fr.json').success(function(data){
 						$scope.pokemonsTranslation = data;
-            $http.get('data/types-translation-en-fr.json').success(function(data){
-            $scope.typesTranslation = data;
-            $scope.runTime();
-          });
+                        $http.get('data/types-translation-en-fr.json').success(function(data){
+                            $scope.typesTranslation = data;
+                            $scope.runTime();
+                        });
 					});
 				});
 			});

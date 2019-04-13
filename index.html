@@ -41,8 +41,7 @@
                 <th ng-click="orderBy(calcDefense)">Defense</th>
                 <th ng-click="orderBy(calcStamina)">Stamina</th>
                 <th>PC</th>
-                <th ng-click="orderBy('sum')">Sum</th>
-                <th ng-click="orderBy('prod')">Prod</th>
+                <th ng-click="orderBy(calcTankiness)">Tankiness</th>
                 <th>Quick moves</th>
                 <th>Special moves</th>
             </tr>
@@ -89,14 +88,7 @@
                     </div>
                 </td>
                 <td>{{calcPC(pokemon, pokemon.lvl || 40)}}</td>
-                <td>
-                    <div>{{::pokemon.sum}}</div>
-                    <div>({{pourcent(pokemon.sum, 736) | number: 2}}%)</div>
-                </td>
-                <td>
-                    <div>{{::pokemon.prod}}</div>
-                    <div>({{pourcent(pokemon.prod, 11552000) | number: 2}}%)</div>
-                </td>
+                <td>{{pokemon.tankiness()}}</td>
                 <td>
                     <table>
                         <tr>
