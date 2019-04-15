@@ -254,7 +254,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 
 	//__RUNTIME__
 
-	$http.get('data/pokemons.json').success(function(pokemons){
+	$http.get('data/pokemons2.json').success(function(pokemons){
 		$scope.pokemons = pokemons;
 		$http.get('data/moves.json').success(function(moves){
 			$scope.moves = moves;
