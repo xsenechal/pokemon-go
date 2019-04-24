@@ -59,6 +59,9 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	}
 
 	$scope.stab = function(pokemon, move){
+	    if(move.type.toUpperCase() == 'NORMAL') {
+	        return false;
+	    }
 		return move.type.toUpperCase() == pokemon.Type1.toUpperCase() || move.type.toUpperCase() == pokemon.Type2.toUpperCase()
 	};
 
@@ -148,11 +151,10 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 			var nrj = 0;
 			while (true){
 				var usedMove = quickMove;
-				nrj = Math.min(100, nrj + +usedMove.damageWindow);
-				if (nrj >= (+chargeMove.power*100/+chargeMove.damageWindow)){
+				if (nrj >= +chargeMove.energy * -1){
 					usedMove = chargeMove;
-					nrj -= (+usedMove.power*100/+usedMove.damageWindow);
 				}
+				nrj = Math.min(100, nrj + +usedMove.energy);
 				time += +usedMove.durationMS.replace(',', '');
 				if (time <= 600000){
 					dmg += $scope.computeDamage(A, usedMove, D, Al, Dl);
@@ -168,7 +170,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 		var res = {};
 		angular.forEach(pokemonA['Quick Moves'], function(quickMove){
 			angular.forEach(pokemonA['Charge/Special Moves'], function(chargeMove){
-				res[(quickMove.localName||quickMove.name)+" | "+(chargeMove.localName||chargeMove.name)] = analyseMoveSet(pokemonA, quickMove, chargeMove, pokemonD, $scope.lvl.A, $scope.lvl.D);
+				res[(quickMove.localName||quickMove.name)+" | "+(chargeMove.localName||chargeMove.name)] = analyseMoveSet(pokemonA, quickMove, chargeMove, pokemonD, pokemonA.lvl, 30);
 			});
 		});
 		return res;
