@@ -38,6 +38,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	$scope.lvl = {A: 40, D: 40};
 	$scope.display=1;
 	$scope.versus = {defensor: "", pokeDefensor: null, pokemons: []};
+	$scope.option = {'pvp':false};
 	//$scope.defensor = "Bulbasaur";
 	//$scope.pokeDefensor = null;
 	$scope.filter = "Id";
@@ -74,7 +75,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	$scope.computeDamage = function(A, M, D, Al, Dl){
 		var attack = (A.BaseAttack+15)*$scope.cpM(Al);
 		var defence = (D.BaseDefense+15)*$scope.cpM(Dl);
-		return Math.floor(0.5*M.power*attack/defence*($scope.stab(A, M)?1.25:1)*$scope.efficiency(M, D))+1;
+		return Math.floor(0.5*M.power()*attack/defence*($scope.stab(A, M)?1.25:1)*$scope.efficiency(M, D))+1;
 	};
 
 	$scope.cpM = function(lvl){
@@ -151,14 +152,13 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 			var nrj = 0;
 			while (true){
 				var usedMove = quickMove;
-				if (nrj >= +chargeMove.energy * -1){
+				if (nrj >= +chargeMove.energy() * -1){
 					usedMove = chargeMove;
 				}
-				nrj = Math.min(100, nrj + +usedMove.energy);
-				time += +usedMove.durationMS.replace(',', '');
+				nrj = Math.min(100, nrj + +usedMove.energy());
+				time += +usedMove.durationMS().replace(',', '');
 				if (time <= 600000){
 					dmg += $scope.computeDamage(A, usedMove, D, Al, Dl);
-				   //dmg += Math.floor(0.5*usedMove.power*pokemon.BaseAttack/146*($scope.stab(pokemon, usedMove)?1.25:1))+1;
 				}
 				else{
 					break;
@@ -241,6 +241,9 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 			move['localName'] = $scope.movesTranslation[move['displayName']];
             move['displayType'] = move.type.toLowerCase().replace(/\b\w/g, function(l){ return l.toUpperCase() });
             move['localType'] = $scope.typesTranslation[move['displayType']];
+            move.power = function(){return $scope.option.pvp ? move.pvpPower : move.pvePower;};
+            move.energy = function(){return $scope.option.pvp ? move.pvpEnergy : move.pveEnergy;};
+            move.durationMS = function(){return $scope.option.pvp ? move.pvpDurationMS : move.pveDurationMS;};
 			angular.forEach(move.pokemons, function(id){
 				var tmp = $filter('filter')($scope.pokemons, {Id: +id}, true);
 				angular.forEach(tmp, function(pokemon){
@@ -251,7 +254,7 @@ myApp.controller('MyCtrl', function($scope, $filter,$http) {
 	};
 
 	$scope.calcPC = function(pokemon, lvl) {
-	    return Math.floor(Math.max((pokemon.BaseAttack)*Math.pow(pokemon.BaseDefense, 0.5)*Math.pow(pokemon.BaseStamina, 0.5)*Math.pow($scope.cpM(lvl+""), 2)/10, 10));
+	    return Math.floor(Math.max((pokemon.BaseAttack+15)*Math.pow(pokemon.BaseDefense+15, 0.5)*Math.pow(pokemon.BaseStamina+15, 0.5)*Math.pow($scope.cpM(lvl+""), 2)/10, 10));
 	};
 
 	//__RUNTIME__

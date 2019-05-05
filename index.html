@@ -24,6 +24,10 @@
         <label style="padding-right: 10px; padding-left: 10px;">Global:</label>
         <input ng-model="search.$">
         <div>
+            <label style="padding-right: 10px;">PVP:</label>
+            <input type="checkbox" ng-model="option.pvp"/>
+        </div>
+        <div>
             <label style="padding-right: 10px;">PC max:</label>
             <input ng-model="values.pcMax">
             <button ng-click="computeAllPvp()">Compute!</button>
@@ -108,12 +112,12 @@
                                 </div>
                             </td>
                             <td>{{::move.localType}}</td>
-                            <td>{{::move.power}}</td>
-                            <td>{{::move.energy}}</td>
-                            <td>{{::move.durationMS}}</td>
-                            <td ng-switch-when="true"><b>{{::move.power*1250 / +move.durationMS.replace(',', '') | number:2}}</b></td>
-                            <td ng-switch-when="false">{{::move.power*1000 / +move.durationMS.replace(',', '') | number:2}}</td>
-                            <td>{{::move.energy*1000 / +move.durationMS.replace(',', '') | number:2}}</td>
+                            <td>{{move.power()}}</td>
+                            <td>{{move.energy()}}</td>
+                            <td>{{move.durationMS()}}</td>
+                            <td ng-switch-when="true"><b>{{move.power()*1250 / +move.durationMS().replace(',', '') | number:2}}</b></td>
+                            <td ng-switch-when="false">{{move.power()*1000 / +move.durationMS().replace(',', '') | number:2}}</td>
+                            <td>{{move.energy()*1000 / +move.durationMS().replace(',', '') | number:2}}</td>
                         </tr>
                     </table>
                 </td>
@@ -123,6 +127,7 @@
                             <th>Name</th>
                             <th>Type</th>
                             <th>Power</th>
+                            <th>Energy</th>
                             <th>Duration</th>
                             <th>DPS</th>
                         </tr>
@@ -134,10 +139,11 @@
                                 </div>
                             </td>
                             <td>{{::move.localType}}</td>
-                            <td>{{::move.power}}</td>
-                            <td>{{::move.durationMS}}</td>
-                            <td ng-switch-when="true"><b>{{::move.power*1250 / +move.durationMS.replace(',', '') | number:2}}</b></td>
-                            <td ng-switch-when="false">{{::move.power*1000 / +move.durationMS.replace(',', '') | number:2}}</td>
+                            <td>{{move.power()}}</td>
+                            <td>{{move.energy()}}</td>
+                            <td>{{move.durationMS()}}</td>
+                            <td ng-switch-when="true"><b>{{move.power()*1250 / +move.durationMS().replace(',', '') | number:2}}</b></td>
+                            <td ng-switch-when="false">{{move.power()*1000 / +move.durationMS().replace(',', '') | number:2}}</td>
                         </tr>
                     </table>
                 </td>
@@ -201,8 +207,8 @@
                                         <small>({{::move.displayName}})</small>
                                     </td>
                                     <td>{{::move.localType}}</td>
-                                    <td>{{::move.power}}</td>
-                                    <td>{{::move.durationMS}}</td>
+                                    <td>{{move.power()}}</td>
+                                    <td>{{move.durationMS()}}</td>
                                     <td ng-switch-when="true"><b>{{::move.dps*1.25 | number:2}}</b></td>
                                     <td ng-switch-when="false">{{::move.dps}}</td>
                                 </tr>
@@ -223,8 +229,8 @@
                                         <small>({{::move.displayName}})</small>
                                     </td>
                                     <td>{{::move.localType}}</td>
-                                    <td>{{::move.power}}</td>
-                                    <td>{{::move.durationMS}}</td>
+                                    <td>{{move.power()}}</td>
+                                    <td>{{move.durationMS()}}</td>
                                     <td ng-switch-when="true"><b>{{::move.dps*1.25 | number:2}}</b></td>
                                     <td ng-switch-when="false">{{::move.dps}}</td>
                                 </tr>
